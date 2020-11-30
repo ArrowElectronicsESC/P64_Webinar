@@ -39,8 +39,8 @@
 #ifndef RESOURCE_MAP_H_
 #define RESOURCE_MAP_H_
 
-#define sI2C_SCL                    (P9_0)
-#define sI2C_SDA                    (P9_1)
+//#define sI2C_SCL                    (P9_0)
+//#define sI2C_SDA                    (P9_1)
 
 #if defined (TARGET_CY8CPROTO_062S3_4343W)      /* CY8CPROTO-063S2-4343W kit */
     #define mI2C_SCL                (P5_0)

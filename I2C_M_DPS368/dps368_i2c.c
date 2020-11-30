@@ -354,7 +354,7 @@ float Calculate_Pressure(int32_t raw_pressure)
       Praw_sc = Praw/kP
     */
     prs = DPS368_Coef.c00 + Praw_sc*(DPS368_Coef.c10 + Praw_sc *(DPS368_Coef.c20+ Praw_sc *DPS368_Coef.c30)) + Traw_sc *DPS368_Coef.c01 +
- 		  Traw_sc *Praw_sc *(DPS368_Coef.c11+Praw_sc*DPS368_Coef.c21);
+ 		  Praw_sc *(DPS368_Coef.c11+Praw_sc*DPS368_Coef.c21);
 
 //    printf("Praw sc = %4.2f Raw Pressure =  %4.2f, scaling factor = %d \r\n", Praw_sc, raw_pressure, scaling_factor[PRS_RATE]);
 

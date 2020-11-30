@@ -39,7 +39,7 @@
 #define DPS368_H_
 
 /* Enable / Disable printing of debug info from DPS368 */
-#define PRINT_DEBUG 0
+#define PRINT_DEBUG 1
 
 
 /* I2C define */
