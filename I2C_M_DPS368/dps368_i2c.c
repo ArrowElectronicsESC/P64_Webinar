@@ -54,7 +54,7 @@ cy_rslt_t result;
 struct	coef	DPS368_Coef;
 
 /* Scaling Factors from the DPS368 data sheet Section 4.9.3 page 16 */
-int32_t scaling_factor[8] = {524288, 1572864, 3670016, 7844320, 253952, 516096, 1040384, 2088960};
+int32_t scaling_factor[8] = {524288, 1572864, 3670016, 7864320, 253952, 516096, 1040384, 2088960};
 
 float Traw_sc;		// for the scale raw temperature data used in calculating pressure
 
@@ -353,8 +353,8 @@ float Calculate_Pressure(int32_t raw_pressure)
       Traw_sc = Traw/kT
       Praw_sc = Praw/kP
     */
-    prs = DPS368_Coef.c00 + Praw_sc*(DPS368_Coef.c10 + Praw_sc *(DPS368_Coef.c20+ Praw_sc *DPS368_Coef.c30)) + Traw_sc *DPS368_Coef.c01 +
- 		  Praw_sc *(DPS368_Coef.c11+Praw_sc*DPS368_Coef.c21);
+    prs = DPS368_Coef.c00 + Praw_sc*(DPS368_Coef.c10 + Praw_sc *(DPS368_Coef.c20+ Praw_sc *DPS368_Coef.c30)) + Traw_sc * (DPS368_Coef.c01 +
+ 		  Praw_sc *(DPS368_Coef.c11+Praw_sc*DPS368_Coef.c21));
 
 //    printf("Praw sc = %4.2f Raw Pressure =  %4.2f, scaling factor = %d \r\n", Praw_sc, raw_pressure, scaling_factor[PRS_RATE]);
 
@@ -483,15 +483,15 @@ void Get_DPS368_Coefficients()
       	printf(" Raw Coef %x = %x", (unsigned int) i, (unsigned int) coef_buffer[i]);
       	printf("\r\n");
     }
-    printf("Coef C0 = %x %d \r\n", (int32_t)DPS368_Coef.c0, (int32_t)DPS368_Coef.c0);
-    printf("Coef C1 = %x %d \r\n", (int32_t)DPS368_Coef.c1, (int32_t)DPS368_Coef.c1);
-    printf("Coef C00 = %x %d \r\n", (int32_t)DPS368_Coef.c00, (int32_t)DPS368_Coef.c00);
-    printf("Coef C10 = %x %d \r\n", (int32_t)DPS368_Coef.c10, (int32_t)DPS368_Coef.c10);
-    printf("Coef C01 = %x %d \r\n", (int32_t)DPS368_Coef.c01, (int32_t)DPS368_Coef.c01);
-    printf("Coef C11 = %x %d \r\n", (int32_t)DPS368_Coef.c11, (int32_t)DPS368_Coef.c11);
-    printf("Coef C20 = %x %d \r\n", (int32_t)DPS368_Coef.c20, (int32_t)DPS368_Coef.c20);
-    printf("Coef C21 = %x %d \r\n", (int32_t)DPS368_Coef.c21,(int32_t)DPS368_Coef.c21);
-    printf("Coef C30 = %x %d \r\n", (int32_t)DPS368_Coef.c30, (int32_t)DPS368_Coef.c30);
+    printf("Coef C0 = %x     %d \r\n",  (int)DPS368_Coef.c0,  (int)DPS368_Coef.c0);
+    printf("Coef C1 = %x     %d \r\n",  (int)DPS368_Coef.c1,  (int)DPS368_Coef.c1);
+    printf("Coef C00 = %x     %d \r\n", (int)DPS368_Coef.c00, (int)DPS368_Coef.c00);
+    printf("Coef C10 = %x     %d \r\n", (int)DPS368_Coef.c10, (int)DPS368_Coef.c10);
+    printf("Coef C01 = %x     %d \r\n", (int)DPS368_Coef.c01, (int)DPS368_Coef.c01);
+    printf("Coef C11 = %x     %d \r\n", (int)DPS368_Coef.c11, (int)DPS368_Coef.c11);
+    printf("Coef C20 = %x     %d \r\n", (int)DPS368_Coef.c20, (int)DPS368_Coef.c20);
+    printf("Coef C21 = %x     %d \r\n", (int)DPS368_Coef.c21, (int)DPS368_Coef.c21);
+    printf("Coef C30 = %x     %d \r\n", (int)DPS368_Coef.c30, (int)DPS368_Coef.c30);
 
 #endif
 

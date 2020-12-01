@@ -43,7 +43,11 @@
 
 
 /* I2C define */
-#define I2C_SLAVE_ADDR	(0x76UL)
+#define I2C_SLAVE_ADDR	(0x77UL)
+
+/* I2C bus frequency */
+#define I2C_FREQ                (400000UL)
+
 #define SEND_RESTART	false
 #define SEND_STOP		true
 

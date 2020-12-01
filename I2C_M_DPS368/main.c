@@ -52,12 +52,6 @@
 #define CMD_TO_CMD_DELAY        (1000UL)
 #define STATUS_REG_READ_DELAY_MS   (1L)
 
-/* I2C slave address to communicate with */
-#define I2C_SLAVE_ADDR          (0x76UL)
-
-/* I2C bus frequency */
-#define I2C_FREQ                (400000UL)
-
 /***************************************
 *          Global Variables
 ****************************************/
@@ -116,8 +110,28 @@ int main(void)
  	float prs_flt;
  	float last_prs_flt;
 
+
+
+    /* Init LED */
+    result = cyhal_gpio_init( CYBSP_D4, CYHAL_GPIO_DIR_OUTPUT,
+                              CYHAL_GPIO_DRIVE_STRONG, 0);
+ //   cyhal_gpio_write( CYBSP_D4, 0);
+
+    cyhal_gpio_toggle(CYBSP_D4);
+
     /* Set up the device based on configurator selections */
     result = cybsp_init();
+
+    cyhal_gpio_toggle(CYBSP_D4);
+
+    /* Init LED */
+    result = cyhal_gpio_init( CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT,
+                              CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
+//    cyhal_gpio_write( CYBSP_USER_LED, 0);
+
+    cyhal_gpio_toggle(CYBSP_USER_LED);
+
+
     if (result != CY_RSLT_SUCCESS)
     {
         handle_error();
@@ -137,10 +151,6 @@ int main(void)
     printf("Barometric Pressure Sensor\r\n");
     printf("****************************\r\n\n");
 
-    /* Init LED */
-    result = cyhal_gpio_init( CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT,
-                              CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
-    cyhal_gpio_write( CYBSP_USER_LED, 0);
 
     last_prs_flt = 0;
     first_prs = 0;
@@ -242,15 +252,17 @@ int main(void)
      	}
      	if (prs_flt- last_prs_flt > 80)
      	{
-     		cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_ON);
+     	//	cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_ON);
      		printf("Fall Event \r\n");
      	}
      	else
      	{
-     		cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_OFF);
+     	//	cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_OFF);
      	}
      	last_prs_flt = prs_flt;
      	first_prs = 1;
+
+     	cyhal_gpio_toggle(CYBSP_USER_LED);
 
      	Set_DPS368_Sensor_Operating_Mode(STANDBY);
 
