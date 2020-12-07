@@ -38,9 +38,10 @@
 #ifndef DPS368_H_
 #define DPS368_H_
 
+#include "cybsp.h"
+
 /* Enable / Disable printing of debug info from DPS368 */
 #define PRINT_DEBUG 1
-
 
 /* I2C define */
 #define I2C_SLAVE_ADDR	(0x77UL)
@@ -78,8 +79,8 @@
 #define CFG_REG		0x09	// Interrupt and FIFO Configuration
 #define	INT_STS		0x0A	// Interrupt Status
 #define FIFO_STS	0x0B	// FIFO Status
-#define RESET		0x0C	// Soft Reset
-#define ID			0x0D	// Product and Revision ID - Value - 0x10
+#define RESET_CHIP	0x0C	// Soft Reset
+#define PRODUCT_ID	0x0D	// Product and Revision ID - Value - 0x10
 #define C0			0x10	// Start of Coeffiecent Registers is C0
 #define C1			0x11	// Start of Coeffiecent Registers is C0
 #define COEF_SRC	0x28	// 0 = Internal temperature of ASIC, 1 = External temperature sesnor (of the pressure MEMS element)
@@ -150,8 +151,8 @@ struct coef	{
 
 void 	 DPS368_Init();
 uint8_t  Get_DPS368_ID();
-uint32_t Get_DPS368_Pressure();
-uint32_t Get_DPS368_Temperature();
+int32_t Get_DPS368_Pressure();
+int32_t Get_DPS368_Temperature();
 float 	 Calculate_Pressure(int32_t raw_pressure);
 float 	 Calculate_Temperature(int32_t raw_temperature);
 uint8_t  Get_DPS368_Coef_Source();

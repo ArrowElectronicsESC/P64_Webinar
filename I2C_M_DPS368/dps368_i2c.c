@@ -204,7 +204,7 @@ uint8_t Get_DPS368_ID()
 	uint8_t 	send_buffer;
 	uint8_t 	rcv_buffer;
 
-	send_buffer = ID;
+	send_buffer = PRODUCT_ID;
 
   	result = cyhal_i2c_master_write( &mI2C, I2C_SLAVE_ADDR, &send_buffer, SEND_ONE_BYTE, 0, SEND_RESTART);
    	result = cyhal_i2c_master_read( &mI2C, I2C_SLAVE_ADDR,  &rcv_buffer, RCV_ONE_BYTE , 0, SEND_STOP);
@@ -230,11 +230,12 @@ uint8_t Get_DPS368_ID()
 *  raw pressure
 *
 *******************************************************************************/
-uint32_t Get_DPS368_Pressure()
+int32_t Get_DPS368_Pressure()
 {
 	uint32_t	psr_b2, psr_b1, psr_b0;
 	uint8_t 	send_data;
 	uint8_t 	rcv_data;
+	int32		raw_pressure;
 
     /* Read MSB */
 	send_data = PSR_B2;
@@ -267,8 +268,13 @@ uint32_t Get_DPS368_Pressure()
     {
        DPS368_handle_error();
     }
+    raw_pressure = (int)(psr_b2 <<16 | psr_b1 << 8 | psr_b0);
+    getTwosComplement(&raw_pressure, 24);
 
- 	return ((uint32_t)(psr_b2 <<16 | psr_b1 << 8 | psr_b0));
+#if PRINT_DEBUG == 1
+    printf("Raw Pressure %x   %ld \r\n", (int)(psr_b2 <<16 | psr_b1 << 8 | psr_b0), raw_pressure);
+#endif
+ 	return (raw_pressure);
 }
 
 /*******************************************************************************
@@ -284,7 +290,7 @@ uint32_t Get_DPS368_Pressure()
 *  raw temperature
 *
 *******************************************************************************/
-uint32_t Get_DPS368_Temperature()
+int32_t Get_DPS368_Temperature()
 {
 	uint32_t	tmp_b2, tmp_b1, tmp_b0;
 	uint8_t		send_data;
@@ -321,8 +327,11 @@ uint32_t Get_DPS368_Temperature()
     {
        DPS368_handle_error();
     }
+#if PRINT_DEBUG == 1
+    printf("Raw Temp %x    %d \r\n", (int)(tmp_b2 <<16 | tmp_b1 << 8 | tmp_b0), (int)(tmp_b2 <<16 | tmp_b1 << 8 | tmp_b0));
+#endif
 
-    return ((uint32_t)(tmp_b2 <<16 | tmp_b1 << 8 | tmp_b0));
+    return ((int32_t)(tmp_b2 <<16 | tmp_b1 << 8 | tmp_b0));
 }
 
 /*******************************************************************************
