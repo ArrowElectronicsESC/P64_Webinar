@@ -1,0 +1,36 @@
+2020-11-02 09:48:16,962 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 63: First stage validation success
+2020-11-02 09:48:16,962 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 73: Validating firmware slots overlapping
+2020-11-02 09:48:18,512 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-02 09:48:18,932 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-02 09:48:18,940 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 88: Validating there is no different JWKs with the same key ID
+2020-11-02 09:48:18,941 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 96: Validating multi-image IDs
+2020-11-02 09:48:18,941 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 103: Validating multi-image smif_id
+2020-11-02 09:48:18,941 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 117: Validating policy for BOOT sections, encryption and SMIF
+2020-11-02 09:48:18,941 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 376: UPGRADE slot will reside in external flash at address 0x18000000
+2020-11-02 09:48:18,941 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 124: Validating monotonic counter
+2020-11-02 09:48:18,942 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 130: Validating CyBootloader paths
+2020-11-02 09:48:18,942 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 136: Validate whether slots address value is aligned with the SMPU address limits
+2020-11-02 09:48:18,942 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 143: Check aligning to Memory map
+2020-11-02 09:48:18,942 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 168: Second stage validation success
+2020-11-02 09:48:21,838 : C : INFO  : Created key in c:\Users\A62584\FreeRTOS\vendors\cypress\MTB\psoc6\psoc64tfm\security\keys\TFM_S_KEY.json
+2020-11-02 09:48:21,840 : C : DEBUG : cysecuretools.execute.keygen, line 103: {
+    "alg": "ES256",
+    "kty": "EC",
+    "crv": "P-256",
+    "use": "sig",
+    "kid": "6",
+    "x": "___0HtEa72Bt2L_ZDddB5eNEOPlRdUn_rnjrvtAqB04",
+    "y": "Eb4CIdgLlNfpQ1hSvOXAMXZQChept_ZZnJ_kWrPfwIg",
+    "d": "Vyg-1gZTnI06-0r_PROHd5Ospt2WupLDUDrW56cGSBE"
+}
+2020-11-02 09:48:21,841 : C : INFO  : Created key in c:\Users\A62584\FreeRTOS\vendors\cypress\MTB\psoc6\psoc64tfm\security\keys\TFM_NS_KEY.json
+2020-11-02 09:48:21,843 : C : DEBUG : cysecuretools.execute.keygen, line 103: {
+    "alg": "ES256",
+    "kty": "EC",
+    "crv": "P-256",
+    "use": "sig",
+    "kid": "8",
+    "x": "p6ECVln6WPGFq_I-fs06joQQ-ZAz9Sm8CzgmPq4kfdY",
+    "y": "rmjDjhRcx4lRzzQ-d1eR1afJkBCCLtGTcejMSWQ_yxY",
+    "d": "-cfn8U02RuySEL37u0jDD_3c354Nq2MV3mZne3CluVk"
+}

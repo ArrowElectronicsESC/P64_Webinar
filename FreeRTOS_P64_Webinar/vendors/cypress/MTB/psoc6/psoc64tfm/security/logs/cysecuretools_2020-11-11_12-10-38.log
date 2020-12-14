@@ -1,0 +1,731 @@
+2020-11-11 12:10:38,102 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 63: First stage validation success
+2020-11-11 12:10:38,102 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 73: Validating firmware slots overlapping
+2020-11-11 12:10:39,523 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:39,567 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 88: Validating there is no different JWKs with the same key ID
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 96: Validating multi-image IDs
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 103: Validating multi-image smif_id
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 117: Validating policy for BOOT sections, encryption and SMIF
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 376: UPGRADE slot will reside in external flash at address 0x18000000
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 124: Validating monotonic counter
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 130: Validating CyBootloader paths
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 136: Validate whether slots address value is aligned with the SMPU address limits
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 143: Check aligning to Memory map
+2020-11-11 12:10:39,576 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 168: Second stage validation success
+2020-11-11 12:10:39,582 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 63: First stage validation success
+2020-11-11 12:10:39,583 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 73: Validating firmware slots overlapping
+2020-11-11 12:10:40,967 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:40,968 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:40,969 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 88: Validating there is no different JWKs with the same key ID
+2020-11-11 12:10:40,969 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 96: Validating multi-image IDs
+2020-11-11 12:10:40,969 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 103: Validating multi-image smif_id
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 117: Validating policy for BOOT sections, encryption and SMIF
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 376: UPGRADE slot will reside in external flash at address 0x18000000
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 124: Validating monotonic counter
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 130: Validating CyBootloader paths
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 136: Validate whether slots address value is aligned with the SMPU address limits
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 143: Check aligning to Memory map
+2020-11-11 12:10:40,970 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 150: Checking integrity of pre-build section
+2020-11-11 12:10:40,977 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 168: Second stage validation success
+2020-11-11 12:10:40,985 : C : DEBUG : cysecuretools.targets.common.policy_filter, line 130: Copying custom section 'tfm': {'attestation_data': {'verification_service_url': 'www.trustedfirmware.org', 'attestation_profile_definition': 'PSA_IOT_PROFILE_1', 'hw_version': '060456527282910010', 'implementation_id': [170, 170, 170, 170, 170, 170, 170, 170, 187, 187, 187, 187, 187, 187, 187, 187, 204, 204, 204, 204, 204, 204, 204, 204, 221, 221, 221, 221, 221, 221, 221, 221]}, 'its': {'offset': 1835008, 'size': 16384, 'num_assets': 10, 'max_asset_size': 512}, 'sst': {'offset': 1851392, 'size': 20480, 'num_assets': 10, 'max_asset_size': 2008}}
+2020-11-11 12:10:41,006 : C : DEBUG : cysecuretools.execute.provisioning_packet_mxs40v1, line 155: Create provisioning request (prov_req) packet
+2020-11-11 12:10:41,006 : C : DEBUG : cysecuretools.execute.provisioning_lib.cyprov_crypto, line 61: create_jwt()= eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZWJ1ZyI6eyJtMHAiOnsicGVybWlzc2lvbiI6ImVuYWJsZWQiLCJjb250cm9sIjoiZmlybXdhcmUiLCJrZXkiOjV9LCJtNCI6eyJwZXJtaXNzaW9uIjoiYWxsb3dlZCIsImNvbnRyb2wiOiJmaXJtd2FyZSIsImtleSI6NX0sInN5c3RlbSI6eyJwZXJtaXNzaW9uIjoiZW5hYmxlZCIsImNvbnRyb2wiOiJmaXJtd2FyZSIsImtleSI6NSwiZmxhc2h3Ijp0cnVlLCJmbGFzaHIiOnRydWV9LCJybWEiOnsicGVybWlzc2lvbiI6ImFsbG93ZWQiLCJkZXN0cm95X2Z1c2VzIjpbeyJzdGFydCI6ODg4LCJzaXplIjoxMzZ9LHsic3RhcnQiOjY0OCwic2l6ZSI6MTA0fV0sImRlc3Ryb3lfZmxhc2giOlt7InN0YXJ0IjoyNzAyNzA0NjQsInNpemUiOjY1NTM2fSx7InN0YXJ0IjoyNjg3NjMxMzYsInNpemUiOjExNzk2NDh9XSwia2V5Ijo1fX0sIndvdW5kaW5nIjp7fSwiYm9vdF91cGdyYWRlIjp7InRpdGxlIjoidXBncmFkZV9wb2xpY3kiLCJmaXJtd2FyZSI6W3siYm9vdF9hdXRoIjpbNV0sImlkIjowLCJsYXVuY2giOjEsImFjcV93aW4iOjEwMCwiY2xvY2tfZmxhZ3MiOjU3OCwicHJvdGVjdF9mbGFncyI6MSwidXBncmFkZSI6ZmFsc2UsInJlc291cmNlcyI6W3sidHlwZSI6IkZMQVNIX1BDMV9TUE0iLCJhZGRyZXNzIjoyNzAzMzYwMDAsInNpemUiOjY1NTM2fSx7InR5cGUiOiJTUkFNX1NQTV9QUklWIiwiYWRkcmVzcyI6MTM1MTM1MjMyLCJzaXplIjo2NTUzNn0seyJ0eXBlIjoiU1JBTV9EQVAiLCJhZGRyZXNzIjoxMzUxODQzODQsInNpemUiOjE2Mzg0fV19LHsiYm9vdF9hdXRoIjpbNl0sImlkIjoxLCJtb25vdG9uaWMiOjAsInNtaWZfaWQiOjAsImFjcV93aW4iOjEwMCwibXVsdGlfaW1hZ2UiOjEsInJvbGxiYWNrX2NvdW50ZXIiOjAsInVwZ3JhZGUiOnRydWUsImVuY3J5cHQiOmZhbHNlLCJlbmNyeXB0X2tleV9pZCI6MSwicmVzb3VyY2VzIjpbeyJ0eXBlIjoiQk9PVCIsImFkZHJlc3MiOjI2ODQzNTQ1Niwic2l6ZSI6MzI3NjgwfSx7InR5cGUiOiJVUEdSQURFIiwiYWRkcmVzcyI6MjY5OTQyNzg0LCJzaXplIjozMjc2ODB9XX0seyJib290X2F1dGgiOls4XSwiaWQiOjE2LCJtb25vdG9uaWMiOjgsInNtaWZfaWQiOjEsIm11bHRpX2ltYWdlIjoyLCJ1cGdyYWRlIjp0cnVlLCJlbmNyeXB0IjpmYWxzZSwiZW5jcnlwdF9rZXlfaWQiOjEsInJlc291cmNlcyI6W3sidHlwZSI6IkJPT1QiLCJhZGRyZXNzIjoyNjg3NjMxMzYsInNpemUiOjExNzk2NDh9LHsidHlwZSI6IlVQR1JBREUiLCJhZGRyZXNzIjo0MDI2NTMxODQsInNpemUiOjExNzk2NDh9XX1dLCJyZXByb2dyYW0iOlt7InN0YXJ0IjoyNzAzMzYwMDAsInNpemUiOjY1NTM2fV0sInJlcHJvdmlzaW9uIjp7ImJvb3RfbG9hZGVyIjp0cnVlLCJrZXlzX2FuZF9wb2xpY2llcyI6dHJ1ZX19LCJ0Zm0iOnsiYXR0ZXN0YXRpb25fZGF0YSI6eyJ2ZXJpZmljYXRpb25fc2VydmljZV91cmwiOiJ3d3cudHJ1c3RlZGZpcm13YXJlLm9yZyIsImF0dGVzdGF0aW9uX3Byb2ZpbGVfZGVmaW5pdGlvbiI6IlBTQV9JT1RfUFJPRklMRV8xIiwiaHdfdmVyc2lvbiI6IjA2MDQ1NjUyNzI4MjkxMDAxMCIsImltcGxlbWVudGF0aW9uX2lkIjpbMTcwLDE3MCwxNzAsMTcwLDE3MCwxNzAsMTcwLDE3MCwxODcsMTg3LDE4NywxODcsMTg3LDE4NywxODcsMTg3LDIwNCwyMDQsMjA0LDIwNCwyMDQsMjA0LDIwNCwyMDQsMjIxLDIyMSwyMjEsMjIxLDIyMSwyMjEsMjIxLDIyMV19LCJpdHMiOnsib2Zmc2V0IjoxODM1MDA4LCJzaXplIjoxNjM4NCwibnVtX2Fzc2V0cyI6MTAsIm1heF9hc3NldF9zaXplIjo1MTJ9LCJzc3QiOnsib2Zmc2V0IjoxODUxMzkyLCJzaXplIjoyMDQ4MCwibnVtX2Fzc2V0cyI6MTAsIm1heF9hc3NldF9zaXplIjoyMDA4fX0sInByb2RfaWQiOiJteV90aGluZyIsImN1c3RvbV9wdWJfa2V5IjpbeyJhbGciOiJFUzI1NiIsImt0eSI6IkVDIiwiY3J2IjoiUC0yNTYiLCJ4IjoiYnJwMWZienF2VjJ2eGVHM1k3SUpjSDZzODZUeFZCQ09hbW9ad3k5WDhpMCIsInkiOiJZeXBCblJpd0l0RG1raEhHQUpwYUFYM3g4aDJueGpSeTNoSmNEMlI2enhFIiwia2lkIjoiNiIsInVzZSI6InNpZyJ9LHsiYWxnIjoiRVMyNTYiLCJrdHkiOiJFQyIsImNydiI6IlAtMjU2IiwieCI6InNzb000QWJTQ0R5Nl9KcElxTFdsNjNCb01DT2FHTnZJQmRrdm9zLWIzdkUiLCJ5IjoiS3BmdDdZbkhySWF0WkNnRTJrV1NjczdQR3RJeGl5bkFMOVNSMWUtVTB0cyIsImtpZCI6IjgiLCJ1c2UiOiJzaWcifV19.mKOu6vqXJ3UZk6S2OXYqvUM3LX1oPnu_RdmZObQMsrb0kumEmptFZGUORyJJzJ2XOA1XHN2bhlNYlpA49xuKXw
+2020-11-11 12:10:41,007 : C : DEBUG : cysecuretools.execute.provisioning_packet_mxs40v1, line 159: Create root-of-trust (prov_rot) packet
+2020-11-11 12:10:41,008 : C : DEBUG : cysecuretools.execute.provisioning_lib.cyprov_crypto, line 61: create_jwt()= eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiT0VNX1JPVF9BVVRIIiwib2VtX3B1Yl9rZXkiOnsiY3J2IjoiUC0yNTYiLCJrdHkiOiJFQyIsInVzZSI6InNpZyIsImtpZCI6IjUiLCJ4IjoidmZiN19qZXdUeHBGVklOY1hkclpRSkJBckM1aWdyTjBCTGM3ODNGaWdyTSIsInkiOiI5ckJCVUtYenBqMUE1SzdmeFB0RWFKZHNmbzdKal93c0Y3TFRaTGMtc1BNIn0sImhzbV9wdWJfa2V5Ijp7ImNydiI6IlAtMjU2Iiwia3R5IjoiRUMiLCJ1c2UiOiJzaWciLCJraWQiOiI0IiwieCI6InNKTXNOLTJKbzI3a2M1MXdWSzd4SjJmUDlCRGt6QWMyZlpFWk1sb2hIWEEiLCJ5IjoiTVdsdXptWGdYT3ZkUVFEWVgzeXkxVGs5UW9ITC05RFpoc3dacFkwWGU1VSJ9LCJwcm9kX2lkIjoibXlfdGhpbmcifQ.81MND9RfyHaWbXs7DOCyREJ7xCRlYTQeB3CrZdp0D6NNGsvONATnA5hYYjgs4RCYkJ7SwU6u99RvYSZ2iMm5fQ
+2020-11-11 12:10:41,009 : C : DEBUG : cysecuretools.execute.provisioning_packet_mxs40v1, line 163: Create device identity packet
+2020-11-11 12:10:41,010 : C : DEBUG : cysecuretools.execute.provisioning_lib.cyprov_crypto, line 61: create_jwt()= eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVfaWRlbnRpdHkiOnRydWUsImN5X2F1dGgiOiJleUpoYkdjaU9pSkZVekkxTmlKOS5leUpoZFhSb0lqb2dleUprWlhaZmFXUWlPaUI3SW1sdVkyeDFaR1VpT2lCYklrVTBOVE11TVRJdU1UQXlJaXdnSWtVME1EQXVNVEl1TVRBeUlpd2dJa1UwUVRBdU1USXVNVEF5SWwxOUxDQWlaR2xsWDJsa0lqb2dleUp0WVhnaU9pQjdJbVJoZVNJNklESTFOU3dnSW14dmRDSTZJREUyTnpjM01qRTFMQ0FpYlc5dWRHZ2lPaUF5TlRVc0lDSjNZV1psY2lJNklESTFOU3dnSW5od2IzTWlPaUF5TlRVc0lDSjVaV0Z5SWpvZ01qVTFMQ0FpZVhCdmN5STZJREkxTlgwc0lDSnRhVzRpT2lCN0ltUmhlU0k2SURBc0lDSnNiM1FpT2lBd0xDQWliVzl1ZEdnaU9pQXdMQ0FpZDJGbVpYSWlPaUF3TENBaWVIQnZjeUk2SURBc0lDSjVaV0Z5SWpvZ01Dd2dJbmx3YjNNaU9pQXdmWDE5TENBaVkzbGZjSFZpWDJ0bGVTSTZJSHNpWTNKMklqb2dJbEF0TWpVMklpd2dJbXRwWkNJNklDSXpJaXdnSW10MGVTSTZJQ0pGUXlJc0lDSjRJam9nSWt0SmFWcE1XVkJCUVMxME1qWlVhRmxDZEdwTFZYWnlWV0ZEZERoVk0xWldVbEV4VUcxWE1sWjRMVTBpTENBaWVTSTZJQ0pQWWtvNVFsYzBOR3MzYTNBMlQwNTNRbEpXVWxGb1EzZEVhMjFSV21GR1UwNWlXRkkxU1hWcldHb3dJaXdnSW5WelpTSTZJQ0p6YVdjaUxDQWlhM1psY2lJNklDSlRNQzB3SW4wc0lDSmxlSEFpT2lBeE5qRTROVE0zTnpNd0xDQWlhSE50WDNCMVlsOXJaWGtpT2lCN0ltTnlkaUk2SUNKUUxUSTFOaUlzSUNKcmFXUWlPaUFpTkNJc0lDSnJkSGtpT2lBaVJVTWlMQ0FpZFhObElqb2dJbk5wWnlJc0lDSjRJam9nSW5OS1RYTk9MVEpLYnpJM2EyTTFNWGRXU3pkNFNqSm1VRGxDUkd0NlFXTXlabHBGV2sxc2IyaElXRUVpTENBaWVTSTZJQ0pOVjJ4MWVtMVlaMWhQZG1SUlVVUlpXRE41ZVRGVWF6bFJiMGhNTFRsRVdtaHpkMXB3V1RCWVpUVlZJbjBzSUNKMGVYQmxJam9nSWtOWlgwRlZWRWhmU0ZOTkluMC5zSTFwMnZYTUJJZTFQQ3luTHlrb2RrYlEtRXJRUlh4elFlQnlscVpoWjhWVzQxeVhNZ3UwYlJNVmJLbW9KNl9hb3ZtVm1Ybk9rczhERnBZZ0dseGlzUSIsInJvdF9hdXRoIjoiZXlKaGJHY2lPaUpGVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjBlWEJsSWpvaVQwVk5YMUpQVkY5QlZWUklJaXdpYjJWdFgzQjFZbDlyWlhraU9uc2lZM0oySWpvaVVDMHlOVFlpTENKcmRIa2lPaUpGUXlJc0luVnpaU0k2SW5OcFp5SXNJbXRwWkNJNklqVWlMQ0o0SWpvaWRtWmlOMTlxWlhkVWVIQkdWa2xPWTFoa2NscFJTa0pCY2tNMWFXZHlUakJDVEdNM09ETkdhV2R5VFNJc0lua2lPaUk1Y2tKQ1ZVdFllbkJxTVVFMVN6ZG1lRkIwUldGS1pITm1iemRLYWw5M2MwWTNURlJhVEdNdGMxQk5JbjBzSW1oemJWOXdkV0pmYTJWNUlqcDdJbU55ZGlJNklsQXRNalUySWl3aWEzUjVJam9pUlVNaUxDSjFjMlVpT2lKemFXY2lMQ0pyYVdRaU9pSTBJaXdpZUNJNkluTktUWE5PTFRKS2J6STNhMk0xTVhkV1N6ZDRTakptVURsQ1JHdDZRV015WmxwRldrMXNiMmhJV0VFaUxDSjVJam9pVFZkc2RYcHRXR2RZVDNaa1VWRkVXVmd6ZVhreFZHczVVVzlJVEMwNVJGcG9jM2RhY0Zrd1dHVTFWU0o5TENKd2NtOWtYMmxrSWpvaWJYbGZkR2hwYm1jaWZRLjgxTU5EOVJmeUhhV2JYczdET0N5UkVKN3hDUmxZVFFlQjNDclpkcDBENk5OR3N2T05BVG5BNWhZWWpnczRSQ1lrSjdTd1U2dTk5UnZZU1oyaU1tNWZRIiwicHJvZF9pZCI6Im15X3RoaW5nIiwidHlwZSI6IkhTTV9QUk9WX0NNRCJ9.f-Lhn6HTXoTs1awlrdUfkC0BSRlNLt6PGzIRJ4Jj77ujBc1WCaC86cGGRq69VwmwDWu7Psc4Qyf_lsIUBN4ZOQ
+2020-11-11 12:10:41,012 : C : DEBUG : cysecuretools.execute.provisioning_lib.cyprov_crypto, line 61: create_jwt()= eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjeV9hdXRoIjoiZXlKaGJHY2lPaUpGVXpJMU5pSjkuZXlKaGRYUm9Jam9nZXlKa1pYWmZhV1FpT2lCN0ltbHVZMngxWkdVaU9pQmJJa1UwTlRNdU1USXVNVEF5SWl3Z0lrVTBNREF1TVRJdU1UQXlJaXdnSWtVMFFUQXVNVEl1TVRBeUlsMTlMQ0FpWkdsbFgybGtJam9nZXlKdFlYZ2lPaUI3SW1SaGVTSTZJREkxTlN3Z0lteHZkQ0k2SURFMk56YzNNakUxTENBaWJXOXVkR2dpT2lBeU5UVXNJQ0ozWVdabGNpSTZJREkxTlN3Z0luaHdiM01pT2lBeU5UVXNJQ0o1WldGeUlqb2dNalUxTENBaWVYQnZjeUk2SURJMU5YMHNJQ0p0YVc0aU9pQjdJbVJoZVNJNklEQXNJQ0pzYjNRaU9pQXdMQ0FpYlc5dWRHZ2lPaUF3TENBaWQyRm1aWElpT2lBd0xDQWllSEJ2Y3lJNklEQXNJQ0o1WldGeUlqb2dNQ3dnSW5sd2IzTWlPaUF3ZlgxOUxDQWlZM2xmY0hWaVgydGxlU0k2SUhzaVkzSjJJam9nSWxBdE1qVTJJaXdnSW10cFpDSTZJQ0l6SWl3Z0ltdDBlU0k2SUNKRlF5SXNJQ0o0SWpvZ0lrdEphVnBNV1ZCQlFTMTBNalpVYUZsQ2RHcExWWFp5VldGRGREaFZNMVpXVWxFeFVHMVhNbFo0TFUwaUxDQWllU0k2SUNKUFlrbzVRbGMwTkdzM2EzQTJUMDUzUWxKV1VsRm9RM2RFYTIxUldtRkdVMDVpV0ZJMVNYVnJXR293SWl3Z0luVnpaU0k2SUNKemFXY2lMQ0FpYTNabGNpSTZJQ0pUTUMwd0luMHNJQ0psZUhBaU9pQXhOakU0TlRNM056TXdMQ0FpYUhOdFgzQjFZbDlyWlhraU9pQjdJbU55ZGlJNklDSlFMVEkxTmlJc0lDSnJhV1FpT2lBaU5DSXNJQ0pyZEhraU9pQWlSVU1pTENBaWRYTmxJam9nSW5OcFp5SXNJQ0o0SWpvZ0luTktUWE5PTFRKS2J6STNhMk0xTVhkV1N6ZDRTakptVURsQ1JHdDZRV015WmxwRldrMXNiMmhJV0VFaUxDQWllU0k2SUNKTlYyeDFlbTFZWjFoUGRtUlJVVVJaV0RONWVURlVhemxSYjBoTUxUbEVXbWh6ZDFwd1dUQllaVFZWSW4wc0lDSjBlWEJsSWpvZ0lrTlpYMEZWVkVoZlNGTk5JbjAuc0kxcDJ2WE1CSWUxUEN5bkx5a29ka2JRLUVyUVJYeHpRZUJ5bHFaaFo4Vlc0MXlYTWd1MGJSTVZiS21vSjZfYW92bVZtWG5Pa3M4REZwWWdHbHhpc1EiLCJpbWFnZV9jZXJ0IjoiZXlKaGJHY2lPaUpGVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBiV0ZuWlY5cFpDSTZNQ3dpYVcxaFoyVmZhR0Z6YUNJNld6VXpMREU1TkN3eE16WXNNVE13TERnMUxERXhNaXd4TXpJc01UZzNMREUwTVN3eU5ETXNOelVzTWprc01TdzNNaXd6TERJMU1Td3hOamtzTVRZMUxESTBPQ3d5TWpNc09UTXNNVGs1TERFM01Td3lOQ3cwTUN3eE1USXNOamNzTXpBc01UQXNNVEV6TERFNE9TdzRYU3dpYVcxaFoyVmZabWxzWlNJNklrTjVjSEpsYzNOQ2IyOTBiRzloWkdWeVgwTk5NSEF1YUdWNElpd2lhVzFoWjJWZllXUmtjbVZ6Y3lJNk1qY3dNek0yTURBd0xDSnBiV0ZuWlY5emFYcGxJam8yTURnMk5Dd2lhVzFoWjJWZmRtVnljMmx2YmlJNklqRXVNUzR3TGpFM09UWWlMQ0p3YjJ4cFkzbGZkR1Z0Y0d4aGRHVWlPaUlpTENKcFlYUWlPakUxT1RBNE1ERTROVFVzSW1WNGNDSTZNVGt5TkRrNE5EZ3dNSDAuMk9nYXFaekh3c2hOSXJDZDNsX3BZX2Q2b0lXQlRyZVBxRjJNNW16ejFDOHY5VWhieTdBTkpnTEpEb3YzeDFXU2NGeVY1aWtPWHdjWnlRcDRxNnMtUmciLCJwcm92X3JlcSI6ImV5SmhiR2NpT2lKRlV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUprWldKMVp5STZleUp0TUhBaU9uc2ljR1Z5YldsemMybHZiaUk2SW1WdVlXSnNaV1FpTENKamIyNTBjbTlzSWpvaVptbHliWGRoY21VaUxDSnJaWGtpT2pWOUxDSnROQ0k2ZXlKd1pYSnRhWE56YVc5dUlqb2lZV3hzYjNkbFpDSXNJbU52Ym5SeWIyd2lPaUptYVhKdGQyRnlaU0lzSW10bGVTSTZOWDBzSW5ONWMzUmxiU0k2ZXlKd1pYSnRhWE56YVc5dUlqb2laVzVoWW14bFpDSXNJbU52Ym5SeWIyd2lPaUptYVhKdGQyRnlaU0lzSW10bGVTSTZOU3dpWm14aGMyaDNJanAwY25WbExDSm1iR0Z6YUhJaU9uUnlkV1Y5TENKeWJXRWlPbnNpY0dWeWJXbHpjMmx2YmlJNkltRnNiRzkzWldRaUxDSmtaWE4wY205NVgyWjFjMlZ6SWpwYmV5SnpkR0Z5ZENJNk9EZzRMQ0p6YVhwbElqb3hNelo5TEhzaWMzUmhjblFpT2pZME9Dd2ljMmw2WlNJNk1UQTBmVjBzSW1SbGMzUnliM2xmWm14aGMyZ2lPbHQ3SW5OMFlYSjBJam95TnpBeU56QTBOalFzSW5OcGVtVWlPalkxTlRNMmZTeDdJbk4wWVhKMElqb3lOamczTmpNeE16WXNJbk5wZW1VaU9qRXhOemsyTkRoOVhTd2lhMlY1SWpvMWZYMHNJbmR2ZFc1a2FXNW5JanA3ZlN3aVltOXZkRjkxY0dkeVlXUmxJanA3SW5ScGRHeGxJam9pZFhCbmNtRmtaVjl3YjJ4cFkza2lMQ0ptYVhKdGQyRnlaU0k2VzNzaVltOXZkRjloZFhSb0lqcGJOVjBzSW1sa0lqb3dMQ0pzWVhWdVkyZ2lPakVzSW1GamNWOTNhVzRpT2pFd01Dd2lZMnh2WTJ0ZlpteGhaM01pT2pVM09Dd2ljSEp2ZEdWamRGOW1iR0ZuY3lJNk1Td2lkWEJuY21Ga1pTSTZabUZzYzJVc0luSmxjMjkxY21ObGN5STZXM3NpZEhsd1pTSTZJa1pNUVZOSVgxQkRNVjlUVUUwaUxDSmhaR1J5WlhOeklqb3lOekF6TXpZd01EQXNJbk5wZW1VaU9qWTFOVE0yZlN4N0luUjVjR1VpT2lKVFVrRk5YMU5RVFY5UVVrbFdJaXdpWVdSa2NtVnpjeUk2TVRNMU1UTTFNak15TENKemFYcGxJam8yTlRVek5uMHNleUowZVhCbElqb2lVMUpCVFY5RVFWQWlMQ0poWkdSeVpYTnpJam94TXpVeE9EUXpPRFFzSW5OcGVtVWlPakUyTXpnMGZWMTlMSHNpWW05dmRGOWhkWFJvSWpwYk5sMHNJbWxrSWpveExDSnRiMjV2ZEc5dWFXTWlPakFzSW5OdGFXWmZhV1FpT2pBc0ltRmpjVjkzYVc0aU9qRXdNQ3dpYlhWc2RHbGZhVzFoWjJVaU9qRXNJbkp2Ykd4aVlXTnJYMk52ZFc1MFpYSWlPakFzSW5Wd1ozSmhaR1VpT25SeWRXVXNJbVZ1WTNKNWNIUWlPbVpoYkhObExDSmxibU55ZVhCMFgydGxlVjlwWkNJNk1Td2ljbVZ6YjNWeVkyVnpJanBiZXlKMGVYQmxJam9pUWs5UFZDSXNJbUZrWkhKbGMzTWlPakkyT0RRek5UUTFOaXdpYzJsNlpTSTZNekkzTmpnd2ZTeDdJblI1Y0dVaU9pSlZVRWRTUVVSRklpd2lZV1JrY21WemN5STZNalk1T1RReU56ZzBMQ0p6YVhwbElqb3pNamMyT0RCOVhYMHNleUppYjI5MFgyRjFkR2dpT2xzNFhTd2lhV1FpT2pFMkxDSnRiMjV2ZEc5dWFXTWlPamdzSW5OdGFXWmZhV1FpT2pFc0ltMTFiSFJwWDJsdFlXZGxJam95TENKMWNHZHlZV1JsSWpwMGNuVmxMQ0psYm1OeWVYQjBJanBtWVd4elpTd2laVzVqY25sd2RGOXJaWGxmYVdRaU9qRXNJbkpsYzI5MWNtTmxjeUk2VzNzaWRIbHdaU0k2SWtKUFQxUWlMQ0poWkdSeVpYTnpJam95TmpnM05qTXhNellzSW5OcGVtVWlPakV4TnprMk5EaDlMSHNpZEhsd1pTSTZJbFZRUjFKQlJFVWlMQ0poWkdSeVpYTnpJam8wTURJMk5UTXhPRFFzSW5OcGVtVWlPakV4TnprMk5EaDlYWDFkTENKeVpYQnliMmR5WVcwaU9sdDdJbk4wWVhKMElqb3lOekF6TXpZd01EQXNJbk5wZW1VaU9qWTFOVE0yZlYwc0luSmxjSEp2ZG1semFXOXVJanA3SW1KdmIzUmZiRzloWkdWeUlqcDBjblZsTENKclpYbHpYMkZ1WkY5d2IyeHBZMmxsY3lJNmRISjFaWDE5TENKMFptMGlPbnNpWVhSMFpYTjBZWFJwYjI1ZlpHRjBZU0k2ZXlKMlpYSnBabWxqWVhScGIyNWZjMlZ5ZG1salpWOTFjbXdpT2lKM2QzY3VkSEoxYzNSbFpHWnBjbTEzWVhKbExtOXlaeUlzSW1GMGRHVnpkR0YwYVc5dVgzQnliMlpwYkdWZlpHVm1hVzVwZEdsdmJpSTZJbEJUUVY5SlQxUmZVRkpQUmtsTVJWOHhJaXdpYUhkZmRtVnljMmx2YmlJNklqQTJNRFExTmpVeU56STRNamt4TURBeE1DSXNJbWx0Y0d4bGJXVnVkR0YwYVc5dVgybGtJanBiTVRjd0xERTNNQ3d4TnpBc01UY3dMREUzTUN3eE56QXNNVGN3TERFM01Dd3hPRGNzTVRnM0xERTROeXd4T0Rjc01UZzNMREU0Tnl3eE9EY3NNVGczTERJd05Dd3lNRFFzTWpBMExESXdOQ3d5TURRc01qQTBMREl3TkN3eU1EUXNNakl4TERJeU1Td3lNakVzTWpJeExESXlNU3d5TWpFc01qSXhMREl5TVYxOUxDSnBkSE1pT25zaWIyWm1jMlYwSWpveE9ETTFNREE0TENKemFYcGxJam94TmpNNE5Dd2liblZ0WDJGemMyVjBjeUk2TVRBc0ltMWhlRjloYzNObGRGOXphWHBsSWpvMU1USjlMQ0p6YzNRaU9uc2liMlptYzJWMElqb3hPRFV4TXpreUxDSnphWHBsSWpveU1EUTRNQ3dpYm5WdFgyRnpjMlYwY3lJNk1UQXNJbTFoZUY5aGMzTmxkRjl6YVhwbElqb3lNREE0Zlgwc0luQnliMlJmYVdRaU9pSnRlVjkwYUdsdVp5SXNJbU4xYzNSdmJWOXdkV0pmYTJWNUlqcGJleUpoYkdjaU9pSkZVekkxTmlJc0ltdDBlU0k2SWtWRElpd2lZM0oySWpvaVVDMHlOVFlpTENKNElqb2lZbkp3TVdaaWVuRjJWakoyZUdWSE0xazNTVXBqU0Raek9EWlVlRlpDUTA5aGJXOWFkM2s1V0RocE1DSXNJbmtpT2lKWmVYQkNibEpwZDBsMFJHMXJhRWhIUVVwd1lVRllNM2c0YURKdWVHcFNlVE5vU21ORU1sSTJlbmhGSWl3aWEybGtJam9pTmlJc0luVnpaU0k2SW5OcFp5SjlMSHNpWVd4bklqb2lSVk15TlRZaUxDSnJkSGtpT2lKRlF5SXNJbU55ZGlJNklsQXRNalUySWl3aWVDSTZJbk56YjAwMFFXSlRRMFI1Tmw5S2NFbHhURmRzTmpOQ2IwMURUMkZIVG5aSlFtUnJkbTl6TFdJemRrVWlMQ0o1SWpvaVMzQm1kRGRaYmtoeVNXRjBXa05uUlRKclYxTmpjemRRUjNSSmVHbDVia0ZNT1ZOU01XVXRWVEIwY3lJc0ltdHBaQ0k2SWpnaUxDSjFjMlVpT2lKemFXY2lmVjE5Lm1LT3U2dnFYSjNVWms2UzJPWFlxdlVNM0xYMW9QbnVfUmRtWk9iUU1zcmIwa3VtRW1wdEZaR1VPUnlKSnpKMlhPQTFYSE4yYmhsTllscEE0OXh1S1h3IiwiY2hhaW5fb2ZfdHJ1c3QiOltdLCJjb21wbGV0ZSI6dHJ1ZSwidHlwZSI6IkhTTV9QUk9WX0NNRCJ9.zBIWRXQarbBY5gn4wbUv0Cojo2AVF4lMS27_k16Dgkh0XXwtlHd6SvG-KH3lTrm5CHWxz1DvB_eOvLHff78Tng
+2020-11-11 12:10:41,013 : C : INFO  : ######################################################################
+2020-11-11 12:10:41,013 : C : INFO  : Provisioning packet is created
+2020-11-11 12:10:41,015 : C : INFO  : ######################################################################
+2020-11-11 12:10:41,021 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 63: First stage validation success
+2020-11-11 12:10:41,022 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 73: Validating firmware slots overlapping
+2020-11-11 12:10:42,426 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:42,427 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 80: Validating boot_auth id matches kid in JSON key file
+2020-11-11 12:10:42,428 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 88: Validating there is no different JWKs with the same key ID
+2020-11-11 12:10:42,428 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 96: Validating multi-image IDs
+2020-11-11 12:10:42,428 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 103: Validating multi-image smif_id
+2020-11-11 12:10:42,428 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 117: Validating policy for BOOT sections, encryption and SMIF
+2020-11-11 12:10:42,428 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 376: UPGRADE slot will reside in external flash at address 0x18000000
+2020-11-11 12:10:42,429 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 124: Validating monotonic counter
+2020-11-11 12:10:42,429 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 130: Validating CyBootloader paths
+2020-11-11 12:10:42,429 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 136: Validate whether slots address value is aligned with the SMPU address limits
+2020-11-11 12:10:42,429 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 143: Check aligning to Memory map
+2020-11-11 12:10:42,429 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 150: Checking integrity of pre-build section
+2020-11-11 12:10:42,431 : C : DEBUG : cysecuretools.targets.common.policy_validator, line 168: Second stage validation success
+2020-11-11 12:10:42,432 : C : INFO  : Target: cy8ckit-064s0s2-4343w
+2020-11-11 12:10:42,835 : P : DEBUG : pyocd.core.session, line 149: Project directory: c:\Users\A62584\FreeRTOS\vendors\cypress\MTB\psoc6\psoc64tfm\security
+2020-11-11 12:10:42,835 : P : INFO  : Target type is cy8c64_sysap
+2020-11-11 12:10:42,874 : P : DEBUG : pyocd.probe.pydapaccess.dap_access_cmsis_dap, line 597: CMSIS-DAP probe 19111301a4190c1500a4190c00000000000000002e127069 firmware version: 0254
+2020-11-11 12:10:42,877 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task load_svd
+2020-11-11 12:10:42,878 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task pre_connect
+2020-11-11 12:10:42,878 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task dp_init
+2020-11-11 12:10:42,878 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:42,878 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:42,882 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:42,882 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:42,886 : P : INFO  : DP IDR = 0x6ba02477 (v2 rev6)
+2020-11-11 12:10:42,887 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task clear_sticky_err
+2020-11-11 12:10:42,887 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task power_up_debug
+2020-11-11 12:10:42,889 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task check_version
+2020-11-11 12:10:42,889 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_discoverer
+2020-11-11 12:10:42,889 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task discovery
+2020-11-11 12:10:42,890 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task find_aps
+2020-11-11 12:10:42,890 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_aps
+2020-11-11 12:10:42,890 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_ap.0
+2020-11-11 12:10:42,891 : P : INFO  : AHB-AP#0 IDR = 0x84770001 (AHB-AP var0 rev8)
+2020-11-11 12:10:42,896 : P : DEBUG : pyocd.coresight.ap, line 575: AHB-AP#0 default HPROT=3 HNONSEC=1
+2020-11-11 12:10:42,897 : P : DEBUG : pyocd.coresight.ap, line 583: AHB-AP#0 implemented HPROT=f HNONSEC=1
+2020-11-11 12:10:42,900 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task find_components
+2020-11-11 12:10:42,901 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task init_ap.0
+2020-11-11 12:10:42,905 : P : INFO  : AHB-AP#0 Class 0x1 ROM table #0 @ 0xf1000000 (designer=034 part=102)
+2020-11-11 12:10:42,906 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_cores
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_components
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task check_for_cores
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task halt_on_connect
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task post_connect
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task post_connect_hook
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task create_flash
+2020-11-11 12:10:42,907 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task notify
+2020-11-11 12:10:42,907 : C : INFO  : Use system AP
+2020-11-11 12:10:42,908 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 123: AP: AP.SYS
+2020-11-11 12:10:42,908 : P : DEBUG : pyocd.core.coresight_target, line 79: selected core #0
+2020-11-11 12:10:42,908 : C : INFO  : Probe ID: 19111301a4190c1500a4190c00000000000000002e127069
+2020-11-11 12:10:42,908 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 209: reset_and_halt (ResetType.HW)
+2020-11-11 12:10:43,119 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,119 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,121 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,121 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,123 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,123 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,126 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,126 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,128 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,128 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,131 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,131 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,131 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,132 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,133 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,135 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,135 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,138 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,138 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,141 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,141 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,143 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,143 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,143 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,144 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,145 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,146 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,146 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,148 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,148 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,150 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,150 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,152 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,152 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,152 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,154 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,154 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,155 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,155 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,157 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,157 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,159 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,159 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,161 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,161 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,161 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,162 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,162 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,165 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,165 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,167 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,167 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,170 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,170 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,172 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,172 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,172 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,173 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,173 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,175 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,175 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,176 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,176 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,178 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,178 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,180 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,180 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,180 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,181 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,181 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,183 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,183 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,185 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,185 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,187 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,187 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,188 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,189 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,189 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,190 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,190 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,191 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,191 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,193 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,193 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,195 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,195 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,197 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,197 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,197 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,199 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,199 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,201 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,201 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,203 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,203 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,205 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,205 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,206 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,207 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,207 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,208 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,208 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,209 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,210 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,211 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,211 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,213 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,213 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,215 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,215 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,215 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,217 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,217 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,218 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,219 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,220 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,220 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,222 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,222 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,224 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,224 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,224 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,225 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,225 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,227 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,227 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,229 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,229 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,231 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,231 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,233 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,233 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,233 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,234 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,234 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,236 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,236 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,238 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,238 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,239 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,240 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,241 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,241 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,242 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,243 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,243 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,245 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,245 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,246 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,246 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,248 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,248 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,250 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,250 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,250 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,252 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,252 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,253 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,253 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,255 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,255 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,257 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,257 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,258 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,259 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,259 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,260 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,260 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,262 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,262 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,263 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,263 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,265 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,265 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,268 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,268 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,268 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,270 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,270 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,271 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,271 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,273 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,273 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,275 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,275 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,277 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,277 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,277 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,278 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,278 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,280 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,280 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,281 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,281 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,283 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,283 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,285 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,285 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,285 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,286 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,286 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,288 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,288 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,290 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,290 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,292 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,292 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,294 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,294 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,294 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,295 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,295 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,297 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,297 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,298 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,298 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,301 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,301 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,303 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,303 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,303 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,304 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,304 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,306 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,306 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,306 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,306 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,309 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,309 : P : DEBUG : pyocd.probe.swj, line 50: Sending SWJ sequence to select SWD; using dormant state
+2020-11-11 12:10:43,311 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,311 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task get_probe_capabilities
+2020-11-11 12:10:43,311 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task connect
+2020-11-11 12:10:43,312 : P : DEBUG : pyocd.coresight.dap, line 155: Default wire protocol selected; using SWD
+2020-11-11 12:10:43,312 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,314 : P : DEBUG : pyocd.coresight.dap, line 179: DP IDCODE read failed; resending SWJ sequence (use deprecated=True)
+2020-11-11 12:10:43,314 : P : DEBUG : pyocd.probe.swj, line 66: Sending deprecated SWJ sequence to select SWD
+2020-11-11 12:10:43,316 : P : INFO  : DP IDR = 0x6ba02477 (v2 rev6)
+2020-11-11 12:10:43,316 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task clear_sticky_err
+2020-11-11 12:10:43,317 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task power_up_debug
+2020-11-11 12:10:43,317 : P : DEBUG : pyocd.utility.sequencer, line 207: Running task check_version
+2020-11-11 12:10:43,318 : C : INFO  : Checking cm0 AP permissions
+2020-11-11 12:10:43,318 : C : DEBUG : cysecuretools.execute.sys_call, line 94: Start GetProvDetails syscall
+2020-11-11 12:10:43,318 : C : DEBUG : cysecuretools.execute.sys_call, line 462: Start wait_acquire_ipc_struct
+2020-11-11 12:10:43,318 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x40220040): 0x80000000
+2020-11-11 12:10:43,319 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x40220040): 0x80000f72
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.sys_call, line 475: wait_acquire_ipc_struct result '0x1'
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x4022004c): 0x80ec000
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x80ec000): 0x37000000
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x80ec004): 0x80ec008
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x80ec008): 0x100
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x80ec00c): 0x0
+2020-11-11 12:10:43,525 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 286: write32 (0x40220048): 0x1
+2020-11-11 12:10:43,526 : C : DEBUG : cysecuretools.execute.sys_call, line 487: Start wait_release_ipc_struct
+2020-11-11 12:10:43,528 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x4022005c): 0x80000f72
+2020-11-11 12:10:43,729 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x4022005c): 0xf72
+2020-11-11 12:10:43,933 : C : DEBUG : cysecuretools.execute.sys_call, line 497: wait_release_ipc_struct result '0x0'
+2020-11-11 12:10:43,935 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec000): 0xa0000000
+2020-11-11 12:10:43,937 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x4022004c): 0x80ec000
+2020-11-11 12:10:43,937 : C : DEBUG : cysecuretools.execute.sys_call, line 527: 0x4022004c 0x80ec000
+2020-11-11 12:10:43,938 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec000): 0xa0000000
+2020-11-11 12:10:43,938 : C : DEBUG : cysecuretools.execute.sys_call, line 527: 0x80ec000 0xa0000000
+2020-11-11 12:10:43,940 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec004): 0x80ec008
+2020-11-11 12:10:43,940 : C : DEBUG : cysecuretools.execute.sys_call, line 527: 0x80ec004 0x80ec008
+2020-11-11 12:10:43,942 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec008): 0xc08
+2020-11-11 12:10:43,942 : C : DEBUG : cysecuretools.execute.sys_call, line 527: 0x80ec008 0xc08
+2020-11-11 12:10:43,943 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec004): 0x80ec008
+2020-11-11 12:10:43,945 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec008): 0xc08
+2020-11-11 12:10:43,946 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 249: read32 (0x80ec00c): 0x101fb600
+2020-11-11 12:10:43,947 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb600): 0x65
+2020-11-11 12:10:43,950 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb601): 0x79
+2020-11-11 12:10:43,952 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb602): 0x4a
+2020-11-11 12:10:43,953 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb603): 0x68
+2020-11-11 12:10:43,955 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb604): 0x62
+2020-11-11 12:10:43,956 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb605): 0x47
+2020-11-11 12:10:43,958 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb606): 0x63
+2020-11-11 12:10:43,959 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb607): 0x69
+2020-11-11 12:10:43,960 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb608): 0x4f
+2020-11-11 12:10:43,961 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb609): 0x69
+2020-11-11 12:10:43,962 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60a): 0x4a
+2020-11-11 12:10:43,964 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60b): 0x46
+2020-11-11 12:10:43,965 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60c): 0x55
+2020-11-11 12:10:43,966 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60d): 0x7a
+2020-11-11 12:10:43,968 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60e): 0x49
+2020-11-11 12:10:43,969 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb60f): 0x31
+2020-11-11 12:10:43,971 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb610): 0x4e
+2020-11-11 12:10:43,972 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb611): 0x69
+2020-11-11 12:10:43,973 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb612): 0x49
+2020-11-11 12:10:43,975 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb613): 0x73
+2020-11-11 12:10:43,976 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb614): 0x49
+2020-11-11 12:10:43,977 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb615): 0x6e
+2020-11-11 12:10:43,979 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb616): 0x52
+2020-11-11 12:10:43,980 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb617): 0x35
+2020-11-11 12:10:43,981 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb618): 0x63
+2020-11-11 12:10:43,982 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb619): 0x43
+2020-11-11 12:10:43,982 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61a): 0x49
+2020-11-11 12:10:43,983 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61b): 0x36
+2020-11-11 12:10:43,984 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61c): 0x49
+2020-11-11 12:10:43,985 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61d): 0x6b
+2020-11-11 12:10:43,986 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61e): 0x70
+2020-11-11 12:10:43,986 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb61f): 0x58
+2020-11-11 12:10:43,987 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb620): 0x56
+2020-11-11 12:10:43,988 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb621): 0x43
+2020-11-11 12:10:43,988 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb622): 0x4a
+2020-11-11 12:10:43,989 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb623): 0x39
+2020-11-11 12:10:43,990 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb624): 0x2e
+2020-11-11 12:10:43,991 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb625): 0x65
+2020-11-11 12:10:43,991 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb626): 0x79
+2020-11-11 12:10:43,992 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb627): 0x4a
+2020-11-11 12:10:43,992 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb628): 0x6b
+2020-11-11 12:10:43,993 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb629): 0x5a
+2020-11-11 12:10:43,994 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62a): 0x57
+2020-11-11 12:10:43,994 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62b): 0x4a
+2020-11-11 12:10:43,995 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62c): 0x31
+2020-11-11 12:10:43,996 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62d): 0x5a
+2020-11-11 12:10:43,997 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62e): 0x79
+2020-11-11 12:10:43,998 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb62f): 0x49
+2020-11-11 12:10:43,998 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb630): 0x36
+2020-11-11 12:10:43,999 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb631): 0x65
+2020-11-11 12:10:44,000 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb632): 0x79
+2020-11-11 12:10:44,001 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb633): 0x4a
+2020-11-11 12:10:44,001 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb634): 0x74
+2020-11-11 12:10:44,002 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb635): 0x4d
+2020-11-11 12:10:44,003 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb636): 0x48
+2020-11-11 12:10:44,003 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb637): 0x41
+2020-11-11 12:10:44,004 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb638): 0x69
+2020-11-11 12:10:44,005 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb639): 0x4f
+2020-11-11 12:10:44,005 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63a): 0x6e
+2020-11-11 12:10:44,006 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63b): 0x73
+2020-11-11 12:10:44,007 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63c): 0x69
+2020-11-11 12:10:44,007 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63d): 0x63
+2020-11-11 12:10:44,008 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63e): 0x47
+2020-11-11 12:10:44,008 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb63f): 0x56
+2020-11-11 12:10:44,009 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb640): 0x79
+2020-11-11 12:10:44,010 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb641): 0x62
+2020-11-11 12:10:44,010 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb642): 0x57
+2020-11-11 12:10:44,011 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb643): 0x6c
+2020-11-11 12:10:44,012 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb644): 0x7a
+2020-11-11 12:10:44,012 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb645): 0x63
+2020-11-11 12:10:44,013 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb646): 0x32
+2020-11-11 12:10:44,014 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb647): 0x6c
+2020-11-11 12:10:44,015 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb648): 0x76
+2020-11-11 12:10:44,015 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb649): 0x62
+2020-11-11 12:10:44,016 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64a): 0x69
+2020-11-11 12:10:44,017 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64b): 0x49
+2020-11-11 12:10:44,017 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64c): 0x36
+2020-11-11 12:10:44,018 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64d): 0x49
+2020-11-11 12:10:44,019 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64e): 0x6d
+2020-11-11 12:10:44,019 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb64f): 0x56
+2020-11-11 12:10:44,020 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb650): 0x75
+2020-11-11 12:10:44,021 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb651): 0x59
+2020-11-11 12:10:44,021 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb652): 0x57
+2020-11-11 12:10:44,022 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb653): 0x4a
+2020-11-11 12:10:44,023 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb654): 0x73
+2020-11-11 12:10:44,024 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb655): 0x5a
+2020-11-11 12:10:44,024 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb656): 0x57
+2020-11-11 12:10:44,025 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb657): 0x51
+2020-11-11 12:10:44,026 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb658): 0x69
+2020-11-11 12:10:44,026 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb659): 0x4c
+2020-11-11 12:10:44,027 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65a): 0x43
+2020-11-11 12:10:44,028 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65b): 0x4a
+2020-11-11 12:10:44,029 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65c): 0x6a
+2020-11-11 12:10:44,030 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65d): 0x62
+2020-11-11 12:10:44,031 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65e): 0x32
+2020-11-11 12:10:44,031 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb65f): 0x35
+2020-11-11 12:10:44,032 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb660): 0x30
+2020-11-11 12:10:44,033 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb661): 0x63
+2020-11-11 12:10:44,034 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb662): 0x6d
+2020-11-11 12:10:44,035 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb663): 0x39
+2020-11-11 12:10:44,035 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb664): 0x73
+2020-11-11 12:10:44,036 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb665): 0x49
+2020-11-11 12:10:44,037 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb666): 0x6a
+2020-11-11 12:10:44,037 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb667): 0x6f
+2020-11-11 12:10:44,038 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb668): 0x69
+2020-11-11 12:10:44,039 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb669): 0x5a
+2020-11-11 12:10:44,039 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66a): 0x6d
+2020-11-11 12:10:44,040 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66b): 0x6c
+2020-11-11 12:10:44,041 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66c): 0x79
+2020-11-11 12:10:44,041 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66d): 0x62
+2020-11-11 12:10:44,042 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66e): 0x58
+2020-11-11 12:10:44,043 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb66f): 0x64
+2020-11-11 12:10:44,043 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb670): 0x68
+2020-11-11 12:10:44,044 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb671): 0x63
+2020-11-11 12:10:44,045 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb672): 0x6d
+2020-11-11 12:10:44,045 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb673): 0x55
+2020-11-11 12:10:44,046 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb674): 0x69
+2020-11-11 12:10:44,047 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb675): 0x4c
+2020-11-11 12:10:44,047 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb676): 0x43
+2020-11-11 12:10:44,048 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb677): 0x4a
+2020-11-11 12:10:44,049 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb678): 0x72
+2020-11-11 12:10:44,049 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb679): 0x5a
+2020-11-11 12:10:44,050 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67a): 0x58
+2020-11-11 12:10:44,051 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67b): 0x6b
+2020-11-11 12:10:44,051 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67c): 0x69
+2020-11-11 12:10:44,052 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67d): 0x4f
+2020-11-11 12:10:44,052 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67e): 0x6a
+2020-11-11 12:10:44,053 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb67f): 0x56
+2020-11-11 12:10:44,054 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb680): 0x39
+2020-11-11 12:10:44,054 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb681): 0x4c
+2020-11-11 12:10:44,055 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb682): 0x43
+2020-11-11 12:10:44,056 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb683): 0x4a
+2020-11-11 12:10:44,056 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb684): 0x74
+2020-11-11 12:10:44,057 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb685): 0x4e
+2020-11-11 12:10:44,058 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb686): 0x43
+2020-11-11 12:10:44,059 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb687): 0x49
+2020-11-11 12:10:44,059 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb688): 0x36
+2020-11-11 12:10:44,060 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb689): 0x65
+2020-11-11 12:10:44,061 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68a): 0x79
+2020-11-11 12:10:44,061 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68b): 0x4a
+2020-11-11 12:10:44,062 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68c): 0x77
+2020-11-11 12:10:44,063 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68d): 0x5a
+2020-11-11 12:10:44,063 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68e): 0x58
+2020-11-11 12:10:44,064 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb68f): 0x4a
+2020-11-11 12:10:44,065 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb690): 0x74
+2020-11-11 12:10:44,065 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb691): 0x61
+2020-11-11 12:10:44,066 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb692): 0x58
+2020-11-11 12:10:44,066 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb693): 0x4e
+2020-11-11 12:10:44,067 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb694): 0x7a
+2020-11-11 12:10:44,067 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb695): 0x61
+2020-11-11 12:10:44,069 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb696): 0x57
+2020-11-11 12:10:44,069 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb697): 0x39
+2020-11-11 12:10:44,070 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb698): 0x75
+2020-11-11 12:10:44,071 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb699): 0x49
+2020-11-11 12:10:44,071 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69a): 0x6a
+2020-11-11 12:10:44,072 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69b): 0x6f
+2020-11-11 12:10:44,073 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69c): 0x69
+2020-11-11 12:10:44,073 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69d): 0x59
+2020-11-11 12:10:44,074 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69e): 0x57
+2020-11-11 12:10:44,075 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb69f): 0x78
+2020-11-11 12:10:44,075 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a0): 0x73
+2020-11-11 12:10:44,076 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a1): 0x62
+2020-11-11 12:10:44,076 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a2): 0x33
+2020-11-11 12:10:44,076 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a3): 0x64
+2020-11-11 12:10:44,077 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a4): 0x6c
+2020-11-11 12:10:44,078 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a5): 0x5a
+2020-11-11 12:10:44,078 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a6): 0x43
+2020-11-11 12:10:44,079 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a7): 0x49
+2020-11-11 12:10:44,080 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a8): 0x73
+2020-11-11 12:10:44,080 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6a9): 0x49
+2020-11-11 12:10:44,081 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6aa): 0x6d
+2020-11-11 12:10:44,082 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ab): 0x4e
+2020-11-11 12:10:44,082 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ac): 0x76
+2020-11-11 12:10:44,083 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ad): 0x62
+2020-11-11 12:10:44,084 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ae): 0x6e
+2020-11-11 12:10:44,084 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6af): 0x52
+2020-11-11 12:10:44,085 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b0): 0x79
+2020-11-11 12:10:44,086 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b1): 0x62
+2020-11-11 12:10:44,086 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b2): 0x32
+2020-11-11 12:10:44,087 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b3): 0x77
+2020-11-11 12:10:44,087 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b4): 0x69
+2020-11-11 12:10:44,088 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b5): 0x4f
+2020-11-11 12:10:44,089 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b6): 0x69
+2020-11-11 12:10:44,090 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b7): 0x4a
+2020-11-11 12:10:44,091 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b8): 0x6d
+2020-11-11 12:10:44,091 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6b9): 0x61
+2020-11-11 12:10:44,092 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ba): 0x58
+2020-11-11 12:10:44,093 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6bb): 0x4a
+2020-11-11 12:10:44,093 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6bc): 0x74
+2020-11-11 12:10:44,094 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6bd): 0x64
+2020-11-11 12:10:44,095 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6be): 0x32
+2020-11-11 12:10:44,095 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6bf): 0x46
+2020-11-11 12:10:44,096 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c0): 0x79
+2020-11-11 12:10:44,096 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c1): 0x5a
+2020-11-11 12:10:44,097 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c2): 0x53
+2020-11-11 12:10:44,098 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c3): 0x49
+2020-11-11 12:10:44,098 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c4): 0x73
+2020-11-11 12:10:44,099 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c5): 0x49
+2020-11-11 12:10:44,100 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c6): 0x6d
+2020-11-11 12:10:44,101 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c7): 0x74
+2020-11-11 12:10:44,101 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c8): 0x6c
+2020-11-11 12:10:44,102 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6c9): 0x65
+2020-11-11 12:10:44,103 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ca): 0x53
+2020-11-11 12:10:44,103 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6cb): 0x49
+2020-11-11 12:10:44,104 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6cc): 0x36
+2020-11-11 12:10:44,105 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6cd): 0x4e
+2020-11-11 12:10:44,105 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ce): 0x58
+2020-11-11 12:10:44,106 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6cf): 0x30
+2020-11-11 12:10:44,107 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d0): 0x73
+2020-11-11 12:10:44,107 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d1): 0x49
+2020-11-11 12:10:44,108 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d2): 0x6e
+2020-11-11 12:10:44,109 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d3): 0x4e
+2020-11-11 12:10:44,109 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d4): 0x35
+2020-11-11 12:10:44,110 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d5): 0x63
+2020-11-11 12:10:44,111 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d6): 0x33
+2020-11-11 12:10:44,111 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d7): 0x52
+2020-11-11 12:10:44,112 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d8): 0x6c
+2020-11-11 12:10:44,112 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6d9): 0x62
+2020-11-11 12:10:44,113 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6da): 0x53
+2020-11-11 12:10:44,114 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6db): 0x49
+2020-11-11 12:10:44,114 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6dc): 0x36
+2020-11-11 12:10:44,115 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6dd): 0x65
+2020-11-11 12:10:44,116 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6de): 0x79
+2020-11-11 12:10:44,116 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6df): 0x4a
+2020-11-11 12:10:44,117 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e0): 0x77
+2020-11-11 12:10:44,118 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e1): 0x5a
+2020-11-11 12:10:44,118 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e2): 0x58
+2020-11-11 12:10:44,119 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e3): 0x4a
+2020-11-11 12:10:44,121 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e4): 0x74
+2020-11-11 12:10:44,121 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e5): 0x61
+2020-11-11 12:10:44,122 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e6): 0x58
+2020-11-11 12:10:44,123 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e7): 0x4e
+2020-11-11 12:10:44,123 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e8): 0x7a
+2020-11-11 12:10:44,124 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6e9): 0x61
+2020-11-11 12:10:44,125 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ea): 0x57
+2020-11-11 12:10:44,125 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6eb): 0x39
+2020-11-11 12:10:44,126 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ec): 0x75
+2020-11-11 12:10:44,127 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ed): 0x49
+2020-11-11 12:10:44,127 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ee): 0x6a
+2020-11-11 12:10:44,128 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ef): 0x6f
+2020-11-11 12:10:44,129 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f0): 0x69
+2020-11-11 12:10:44,129 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f1): 0x5a
+2020-11-11 12:10:44,130 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f2): 0x57
+2020-11-11 12:10:44,131 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f3): 0x35
+2020-11-11 12:10:44,131 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f4): 0x68
+2020-11-11 12:10:44,132 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f5): 0x59
+2020-11-11 12:10:44,133 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f6): 0x6d
+2020-11-11 12:10:44,133 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f7): 0x78
+2020-11-11 12:10:44,134 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f8): 0x6c
+2020-11-11 12:10:44,135 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6f9): 0x5a
+2020-11-11 12:10:44,136 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6fa): 0x43
+2020-11-11 12:10:44,136 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6fb): 0x49
+2020-11-11 12:10:44,137 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6fc): 0x73
+2020-11-11 12:10:44,137 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6fd): 0x49
+2020-11-11 12:10:44,138 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6fe): 0x6d
+2020-11-11 12:10:44,139 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb6ff): 0x4e
+2020-11-11 12:10:44,139 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb700): 0x76
+2020-11-11 12:10:44,140 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb701): 0x62
+2020-11-11 12:10:44,141 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb702): 0x6e
+2020-11-11 12:10:44,141 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb703): 0x52
+2020-11-11 12:10:44,142 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb704): 0x79
+2020-11-11 12:10:44,143 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb705): 0x62
+2020-11-11 12:10:44,143 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb706): 0x32
+2020-11-11 12:10:44,144 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb707): 0x77
+2020-11-11 12:10:44,145 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb708): 0x69
+2020-11-11 12:10:44,145 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb709): 0x4f
+2020-11-11 12:10:44,146 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70a): 0x69
+2020-11-11 12:10:44,147 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70b): 0x4a
+2020-11-11 12:10:44,147 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70c): 0x6d
+2020-11-11 12:10:44,148 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70d): 0x61
+2020-11-11 12:10:44,149 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70e): 0x58
+2020-11-11 12:10:44,149 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb70f): 0x4a
+2020-11-11 12:10:44,150 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb710): 0x74
+2020-11-11 12:10:44,150 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb711): 0x64
+2020-11-11 12:10:44,153 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb712): 0x32
+2020-11-11 12:10:44,154 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb713): 0x46
+2020-11-11 12:10:44,154 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb714): 0x79
+2020-11-11 12:10:44,155 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb715): 0x5a
+2020-11-11 12:10:44,156 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb716): 0x53
+2020-11-11 12:10:44,157 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb717): 0x49
+2020-11-11 12:10:44,157 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb718): 0x73
+2020-11-11 12:10:44,158 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb719): 0x49
+2020-11-11 12:10:44,159 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71a): 0x6d
+2020-11-11 12:10:44,159 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71b): 0x74
+2020-11-11 12:10:44,160 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71c): 0x6c
+2020-11-11 12:10:44,161 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71d): 0x65
+2020-11-11 12:10:44,161 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71e): 0x53
+2020-11-11 12:10:44,162 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb71f): 0x49
+2020-11-11 12:10:44,163 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb720): 0x36
+2020-11-11 12:10:44,163 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb721): 0x4e
+2020-11-11 12:10:44,164 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb722): 0x53
+2020-11-11 12:10:44,165 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb723): 0x77
+2020-11-11 12:10:44,165 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb724): 0x69
+2020-11-11 12:10:44,166 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb725): 0x5a
+2020-11-11 12:10:44,167 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb726): 0x6d
+2020-11-11 12:10:44,168 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb727): 0x78
+2020-11-11 12:10:44,169 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb728): 0x68
+2020-11-11 12:10:44,170 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb729): 0x63
+2020-11-11 12:10:44,170 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72a): 0x32
+2020-11-11 12:10:44,171 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72b): 0x68
+2020-11-11 12:10:44,171 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72c): 0x33
+2020-11-11 12:10:44,172 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72d): 0x49
+2020-11-11 12:10:44,173 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72e): 0x6a
+2020-11-11 12:10:44,173 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb72f): 0x70
+2020-11-11 12:10:44,174 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb730): 0x30
+2020-11-11 12:10:44,175 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb731): 0x63
+2020-11-11 12:10:44,175 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb732): 0x6e
+2020-11-11 12:10:44,176 : C : DEBUG : cysecuretools.execute.programmer.pyocd_wrapper, line 221: read8 (0x101fb733): 0x56
+2020-11-11 12:10:44,177 : C : ERROR : SWD/JTAG Transfer Fault @ 0x101fb734-0x101fb734. Check the log for details
+2020-11-11 12:10:44,177 : C : DEBUG : cysecuretools.cli, line 328: SWD/JTAG Transfer Fault @ 0x101fb734-0x101fb734
+Traceback (most recent call last):
+  File "c:\python37\lib\site-packages\pyocd\probe\cmsis_dap_probe.py", line 285, in read_ap_result_callback
+    return result()
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 830, in read_reg_cb
+    res = transfer.get_result()
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 143, in get_result
+    self.daplink.flush()
+  File "c:\python37\lib\site-packages\pyocd\utility\concurrency.py", line 28, in _locking
+    return func(self, *args, **kwargs)
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 667, in flush
+    self._read_packet()
+  File "c:\python37\lib\site-packages\pyocd\utility\concurrency.py", line 28, in _locking
+    return func(self, *args, **kwargs)
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 915, in _read_packet
+    decoded_data = cmd.decode_data(raw_data)
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 451, in decode_data
+    data = self._decode_transfer_data(data)
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 358, in _decode_transfer_data
+    self._check_response(data[2])
+  File "c:\python37\lib\site-packages\pyocd\probe\pydapaccess\dap_access_cmsis_dap.py", line 337, in _check_response
+    raise DAPAccessIntf.TransferFaultError()
+pyocd.probe.pydapaccess.dap_access_api.DAPAccessIntf.TransferFaultError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\python37\lib\site-packages\cysecuretools\cli.py", line 321, in process
+    probe_id, ap, erase_boot, control_dap_cert)
+  File "c:\python37\lib\site-packages\cysecuretools\main.py", line 314, in re_provision_device
+    probe_id=probe_id)
+  File "c:\python37\lib\site-packages\cysecuretools\core\strategy_context\provisioning_strategy_ctx.py", line 74, in re_provision
+    return self._strategy.re_provision(tool, target, bootloader, **kwargs)
+  File "c:\python37\lib\site-packages\cysecuretools\execute\provision_device_mxs40v1.py", line 135, in re_provision
+    erase_boot, control_dap_cert, ap, probe_id)
+  File "c:\python37\lib\site-packages\cysecuretools\execute\provision_device_mxs40v1.py", line 303, in _provision_complete
+    cm0_open = read_cm0_permissions(tool, target.register_map)
+  File "c:\python37\lib\site-packages\cysecuretools\execute\provision_device_mxs40v1.py", line 452, in read_cm0_permissions
+    passed, data = get_prov_details(tool, reg_map, FB_POLICY_JWT)
+  File "c:\python37\lib\site-packages\cysecuretools\execute\sys_call.py", line 133, in get_prov_details
+    hash_byte_chr = chr(tool.read8(read_hash_addr + i))
+  File "c:\python37\lib\site-packages\cysecuretools\execute\programmer\pyocd_wrapper.py", line 220, in read8
+    data = self.target.read_memory(address, transfer_size=8)
+  File "c:\python37\lib\site-packages\pyocd\core\coresight_target.py", line 332, in read_memory
+    return self.selected_core.read_memory(addr, transfer_size, now)
+  File "c:\python37\lib\site-packages\pyocd\coresight\generic_mem_ap.py", line 67, in read_memory
+    return self.ap.read_memory(addr, transfer_size, True)
+  File "c:\python37\lib\site-packages\pyocd\utility\concurrency.py", line 28, in _locking
+    return func(self, *args, **kwargs)
+  File "c:\python37\lib\site-packages\pyocd\coresight\ap.py", line 883, in _read_memory
+    result = read_mem_cb()
+  File "c:\python37\lib\site-packages\pyocd\coresight\ap.py", line 864, in read_mem_cb
+    res = result_cb()
+  File "c:\python37\lib\site-packages\pyocd\coresight\dap.py", line 603, in read_ap_cb
+    result = result_cb()
+  File "c:\python37\lib\site-packages\pyocd\probe\cmsis_dap_probe.py", line 287, in read_ap_result_callback
+    six.raise_from(self._convert_exception(error), error)
+  File "<string>", line 3, in raise_from
+pyocd.core.exceptions.TransferFaultError: SWD/JTAG Transfer Fault @ 0x101fb734-0x101fb734

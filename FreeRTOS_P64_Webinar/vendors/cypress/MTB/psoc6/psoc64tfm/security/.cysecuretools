@@ -1,0 +1,5 @@
+{
+    "user_settings": {
+        "default_policy": "policy\\policy_multi_CM0_CM4.json"
+    }
+}
