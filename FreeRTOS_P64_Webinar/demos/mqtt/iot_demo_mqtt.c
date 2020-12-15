@@ -29,6 +29,7 @@
  */
 
 extern float prs_flt;
+extern int	 publish_pressure;
 extern int	 fall_event;
 
 /* The config header is always included first. */
@@ -141,7 +142,7 @@ extern int	 fall_event;
 /**
  * @brief Format string of the PUBLISH messages in this demo.
  */
-#define PUBLISH_PAYLOAD_FORMAT                   "Pressure %d Pa  Fall Event = %d"
+#define PUBLISH_PAYLOAD_FORMAT                   "Pressure = %d Pa  Fall Event = %d"
 
 /**
  * @brief Size of the buffer that holds the PUBLISH messages in this demo.
@@ -634,54 +635,57 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
     publishInfo.retryLimit = PUBLISH_RETRY_LIMIT;
 
     /* Loop to PUBLISH all messages of this demo. */
-    for( publishCount = 0;
-         publishCount < IOT_DEMO_MQTT_PUBLISH_BURST_SIZE * IOT_DEMO_MQTT_PUBLISH_BURST_COUNT;
-         publishCount++ )
+    /* Loop to PUBLISH all messages of this demo. */
+    for(;;)
     {
-        /* Announce which burst of messages is being published. */
-        if( publishCount % IOT_DEMO_MQTT_PUBLISH_BURST_SIZE == 0 )
-        {
-            IotLogInfo( "Publishing messages %d to %d.",
-                        publishCount,
-                        publishCount + IOT_DEMO_MQTT_PUBLISH_BURST_SIZE - 1 );
-        }
+    	if(publish_pressure | fall_event)
+    	{
+    		publish_pressure = 0;
 
-        /* Pass the PUBLISH number to the operation complete callback. */
-        publishComplete.pCallbackContext = ( void * ) publishCount;
+    		/* Announce which burst of messages is being published. */
+    		if( publishCount % IOT_DEMO_MQTT_PUBLISH_BURST_SIZE == 0 )
+    		{
+    			IotLogInfo( "Publishing messages %d to %d.",
+    						publishCount,
+							publishCount + IOT_DEMO_MQTT_PUBLISH_BURST_SIZE - 1);
+    		}
 
-        /* Choose a topic name (round-robin through the array of topic names). */
-        publishInfo.pTopicName = pTopicNames[ publishCount % TOPIC_FILTER_COUNT ];
+    		/* Pass the PUBLISH number to the operation complete callback. */
+    		publishComplete.pCallbackContext = ( void * ) publishCount;
 
-        /* Generate the payload for the PUBLISH. */
-        status = snprintf( pPublishPayload,
-                           PUBLISH_PAYLOAD_BUFFER_LENGTH,
-                           PUBLISH_PAYLOAD_FORMAT,
-                           (int) prs_flt,
-                        	fall_event)
-                        		   ;
+    		/* Choose a topic name (round-robin through the array of topic names). */
+    		publishInfo.pTopicName = pTopicNames[ publishCount % TOPIC_FILTER_COUNT ];
 
-        /* Check for errors from snprintf. */
-        if( status < 0 )
-        {
-            IotLogError( "Failed to generate MQTT PUBLISH payload for PUBLISH %d.",
-                         ( int ) publishCount );
-            status = EXIT_FAILURE;
+			/* Generate the payload for the PUBLISH. */
+			status = snprintf( pPublishPayload,
+							   PUBLISH_PAYLOAD_BUFFER_LENGTH,
+							   PUBLISH_PAYLOAD_FORMAT,
+							   (int) prs_flt,
+								fall_event)  ;
 
-            break;
-        }
-        else
-        {
-            publishInfo.payloadLength = ( size_t ) status;
-            status = EXIT_SUCCESS;
-        }
+		   	fall_event = 0;
+        	/* Check for errors from snprintf. */
+        	if( status < 0 )
+        	{
+        		IotLogError( "Failed to generate MQTT PUBLISH payload for PUBLISH %d.",
+        					( int ) publishCount );
+        		status = EXIT_FAILURE;
 
-        /* PUBLISH a message. This is an asynchronous function that notifies of
-         * completion through a callback. */
-        publishStatus = IotMqtt_Publish( mqttConnection,
-                                         &publishInfo,
-                                         0,
-                                         &publishComplete,
-                                         NULL );
+        		break;
+        	}
+        	else
+        	{
+        		publishInfo.payloadLength = ( size_t ) status;
+        		status = EXIT_SUCCESS;
+        	}
+
+        	/* PUBLISH a message. This is an asynchronous function that notifies of
+        	 * completion through a callback. */
+        	publishStatus = IotMqtt_Publish( mqttConnection,
+        									&publishInfo,
+											0,
+											&publishComplete,
+											NULL );
 
         if( publishStatus != IOT_MQTT_STATUS_PENDING )
         {
@@ -704,24 +708,27 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
 
             for( i = 0; i < IOT_DEMO_MQTT_PUBLISH_BURST_SIZE; i++ )
             {
-                if( IotSemaphore_TimedWait( pPublishReceivedCounter,
-                                            MQTT_TIMEOUT_MS ) == false )
-                {
-                    IotLogError( "Timed out waiting for incoming PUBLISH messages." );
-                    status = EXIT_FAILURE;
-                    break;
-                }
-            }
+                	if( IotSemaphore_TimedWait( pPublishReceivedCounter,
+                								MQTT_TIMEOUT_MS ) == false )
+                	{
+                    	IotLogError( "Timed out waiting for incoming PUBLISH messages." );
+                    	status = EXIT_FAILURE;
+                    	break;
+                	}
+            	}
 
-            IotLogInfo( "%d publishes received.",
-                        i );
-        }
+            	IotLogInfo( "%d publishes received.",
+            				i );
+        	}
 
-        /* Stop publishing if there was an error. */
-        if( status == EXIT_FAILURE )
-        {
-            break;
-        }
+        	/* Stop publishing if there was an error. */
+        	if( status == EXIT_FAILURE )
+        	{
+            	break;
+        	}
+
+    	}
+
     }
 
     return status;

@@ -51,6 +51,7 @@ cyhal_i2c_cfg_t mI2C_cfg;
 
 float prs_flt;
 int	  fall_event;
+int	  publish_pressure;
 
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
@@ -244,7 +245,7 @@ void Read_Pressure( void * pvParameters )
 	    uint8_t  temperature_ready;
 	    uint8_t	 wait_count;
 	    uint8_t	 first_prs;
-	    uint8_t	 fall_event_count;
+	    uint8_t	 publish_count;
 	 	float temp_flt ;
 	 	float last_prs_flt;
 
@@ -289,8 +290,8 @@ void Read_Pressure( void * pvParameters )
 	    __enable_irq();
 
 	    fall_event = 0;
-	    fall_event_count = 0;
-
+	    publish_count = 0;
+	    cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_OFF);
 
 
 	    printf("Init DPS368 \r\n");
@@ -352,36 +353,44 @@ void Read_Pressure( void * pvParameters )
 
        	prs_flt = Calculate_Pressure(pressure);
 
-       	/* This is a delta pressure calc. Print the 2nd pressure read and after */
+       	/* This is a delta pressure calc. Print  after 2nd pressure read */
        	if (first_prs)
        	{
-       		printf("Pressure %4.1f Pa \r\n", prs_flt);
-       		printf("Delta P %4.1f \t%4.1f F \r\n", prs_flt- last_prs_flt, ((temp_flt *9/5) +32));
+       		printf("Pressure %4.1f Pa \tDelta P %4.1f Pa \tTemp =  %4.1f F \r\n", prs_flt, prs_flt- last_prs_flt, ((temp_flt *9/5) +32));
+
+       		/* If there is a change of more that +3 Pa, that indicates a fall event */
+       		if (prs_flt- last_prs_flt > 3)
+       		{
+       			fall_event = 1;
+       			publish_count = 0;
+       			cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_ON);
+       			printf("Fall Event \r\n");
+       		}
+       		else
+       		{
+       			cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_OFF);
+       		}
+       		last_prs_flt = prs_flt;
        	}
-       	if (prs_flt- last_prs_flt > 10)
-       	{
-       		fall_event = 1;
-       	//	cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_ON);
-       		printf("Fall Event \r\n");
-       	}
+
+       	/* This meams that this is the 1st pressure read, so set the flag */
        	else
        	{
-       	//	cyhal_gpio_write( CYBSP_USER_LED, CYBSP_LED_STATE_OFF);
+       		first_prs = 1;
        	}
-       	last_prs_flt = prs_flt;
-       	first_prs = 1;
 
-       	if (fall_event)
+       	/* Publish the latest pressure read after 10 times through this task */
+
+       	if (!publish_pressure)
        	{
-       		fall_event_count++;
-       		if (fall_event_count > 5)
+       		publish_count++;
+       		if (publish_count > 10)
        		{
-       			fall_event = 0;
-       			fall_event_count = 0;
+       			publish_pressure = 1;
+       			publish_count = 0;
+       			cyhal_gpio_toggle(CYBSP_LED_RGB_GREEN);
        		}
        	}
-
-       	cyhal_gpio_toggle(CYBSP_LED_RGB_GREEN);
 
        	Set_DPS368_Sensor_Operating_Mode(STANDBY);
      	vTaskDelay(500);
