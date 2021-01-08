@@ -247,8 +247,8 @@ int main(void)
      	/* This is a delta pressure calc. Print the 2nd pressure read and after */
      	if (first_prs)
      	{
-     		printf("Pressure %4.1f \r\n", prs_flt);
-     		printf("Delta P %4.1f \t%4.1f F \r\n", prs_flt- last_prs_flt, ((temp_flt *9/5) +32));
+     		printf("Pressure %4.1f ", prs_flt);
+     		printf("\tDelta P %4.1f \t%4.1f F \r\n", prs_flt- last_prs_flt, ((temp_flt *9/5) +32));
      	}
      	if (prs_flt- last_prs_flt > 80)
      	{

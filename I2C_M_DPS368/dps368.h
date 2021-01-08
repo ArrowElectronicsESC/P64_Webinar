@@ -41,7 +41,7 @@
 #include "cybsp.h"
 
 /* Enable / Disable printing of debug info from DPS368 */
-#define PRINT_DEBUG 1
+#define PRINT_DEBUG 0
 
 /* I2C define */
 #define I2C_SLAVE_ADDR	(0x77UL)
