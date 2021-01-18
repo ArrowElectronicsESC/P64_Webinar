@@ -35,11 +35,19 @@
 #include "cybsp.h"
 #include "resource_map.h"
 
+/* Switch Interrupt defines and functions */
+
+#define GPIO_INTERRUPT_PRIORITY (7u)
+
+static void gpio_interrupt_handler(void *handler_arg, cyhal_gpio_event_t event);
+
+volatile bool gpio_intr_flag = false;
+
 /* DPS368 Variables and Constants */
 /***************************************
 *            Constants
 ****************************************/
-#define CMD_TO_CMD_DELAY        (1000UL)
+// #define CMD_TO_CMD_DELAY        (1000UL)
 #define STATUS_REG_READ_DELAY_MS   (1L)
 #define false 0
 
@@ -50,8 +58,9 @@ cyhal_i2c_t mI2C;
 cyhal_i2c_cfg_t mI2C_cfg;
 
 float prs_flt;
-int	  fall_event;
+int	  publish_fall_event;
 int	  publish_pressure;
+int	  fall_event;
 
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
@@ -233,11 +242,42 @@ void handle_error(void)
     CY_ASSERT(0);
 }
 
+/*******************************************************************************
+* Function Name: gpio_interrupt_handler
+********************************************************************************
+* Summary:
+*   GPIO interrupt handler.
+*
+* Parameters:
+*  void *handler_arg (unused)
+*  cyhal_gpio_irq_event_t (unused)
+*
+*******************************************************************************/
+static void gpio_interrupt_handler(void *handler_arg, cyhal_gpio_irq_event_t event)
+{
+    gpio_intr_flag = 1;
+}
 
-/* Task to be created. */
+
+/*******************************************************************************
+* Function Name: Read Pressure Task
+********************************************************************************
+* Summary:
+*   Init I2C
+*   Init DPS368
+*   Read Temperature
+*   Read Pressure
+*   Calucate Pressure
+*   Check for Fall Eveent
+*   Publish data
+*
+* Parameters:
+*
+*
+*******************************************************************************/
 void Read_Pressure( void * pvParameters )
 {
-	   cy_rslt_t result;
+	    cy_rslt_t result;
 	    uint32_t pressure;
 	    uint32_t temperature;
 	    uint8_t  sensor_ready;
@@ -246,19 +286,23 @@ void Read_Pressure( void * pvParameters )
 	    uint8_t	 wait_count;
 	    uint8_t	 first_prs;
 	    uint8_t	 publish_count;
-	 	float temp_flt ;
+	    float temp_flt ;
 	 	float last_prs_flt;
 
 	    /* The parameter value is expected to be 1 as 1 is passed in the
 	    pvParameters value in the call to xTaskCreate() below. */
 	    configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+
+	    /* Initialize the Green LED - It will toggle everytime an MQTT message is sent */
 	    cyhal_gpio_init(CYBSP_LED_RGB_GREEN, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, false);
+	    cyhal_gpio_init(CYBSP_LED_RGB_RED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, false);
+
 	    /* \x1b[2J\x1b[;H - ANSI ESC sequence for clear screen */
 	    printf("\x1b[2J\x1b[;H");
 
 	    printf("****************************\r\n");
-	    printf("PSoC6 MCU with DPS368 \r\n");
-	    printf("Barometric Pressure Sensor\r\n");
+	    printf("PSoC6 MCU with DPS368 		 \r\n");
+	    printf("Barometric Pressure Sensor   \r\n");
 	    printf("****************************\r\n\n");
 
 	    last_prs_flt = 0;
@@ -291,8 +335,8 @@ void Read_Pressure( void * pvParameters )
 
 	    fall_event = 0;
 	    publish_count = 0;
+	    cyhal_gpio_write( CYBSP_LED_RGB_GREEN, CYBSP_LED_STATE_OFF);
 	    cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_OFF);
-
 
 	    printf("Init DPS368 \r\n");
 	    DPS368_Init();
@@ -308,36 +352,46 @@ void Read_Pressure( void * pvParameters )
 
     for( ;; )
     {
-        /* Task code goes here. */
+    	if(gpio_intr_flag)
+    	{
+    		gpio_intr_flag = 0;
+    		printf("User Button 1 Depressed \r\n");
+    		cyhal_gpio_write( CYBSP_LED_RGB_GREEN, CYBSP_LED_STATE_OFF);
+    		fall_event = 0;
+    	}
+        /* Start by reading the Temperature - this is required for an accurate Pressure calculation. */
         Set_DPS368_Sensor_Operating_Mode(START_TEMPERATURE_MEASUREMENT);
-           wait_count = 0;
-           temperature_ready = TMP_RDY & Get_DPS368_Sensor_Status();
-           while (!temperature_ready)
-           {
-          	 cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
-           	 temperature_ready = (TMP_RDY & Get_DPS368_Sensor_Status());
-            	 wait_count++;
-           	 if (wait_count > 100)
-           	 {
+        wait_count = 0;
+        temperature_ready = TMP_RDY & Get_DPS368_Sensor_Status();
+        while (!temperature_ready)
+        {
+        	cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
+           	temperature_ready = (TMP_RDY & Get_DPS368_Sensor_Status());
+            wait_count++;
+           	if (wait_count > 100)
+           	{
            		 printf("Temp Ready Timeout \r\n");
            		 Set_DPS368_Sensor_Operating_Mode(START_TEMPERATURE_MEASUREMENT);
            		 wait_count = 0;
-           	 }
-           	 cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
-            }
-            temperature = Get_DPS368_Temperature();
+           	}
+           	cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
+        }
+        temperature = Get_DPS368_Temperature();
 
-            Set_DPS368_Sensor_Operating_Mode(STANDBY);
-            cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
-            temp_flt = Calculate_Temperature(temperature);
+        Set_DPS368_Sensor_Operating_Mode(STANDBY);
+        cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
+        temp_flt = Calculate_Temperature(temperature);
 
 
-            /* Get pressure */
-           Set_DPS368_Sensor_Operating_Mode(START_PRESSURE_MEASUREMENT);
-           pressure_ready = PRS_RDY & Get_DPS368_Sensor_Status();
-           wait_count = 0;
-           while (!pressure_ready)
-           {
+        /* Get pressure by starting a pressure measurement and tesing the status bit for ready.
+         * Timeout after not ready for 100ms */
+
+        Set_DPS368_Sensor_Operating_Mode(START_PRESSURE_MEASUREMENT);
+
+        pressure_ready = PRS_RDY & Get_DPS368_Sensor_Status();
+        wait_count = 0;
+        while (!pressure_ready)
+        {
            	cyhal_system_delay_ms(STATUS_REG_READ_DELAY_MS);
            	pressure_ready = (PRS_RDY & Get_DPS368_Sensor_Status());
            	wait_count++;
@@ -348,12 +402,14 @@ void Read_Pressure( void * pvParameters )
            		Set_DPS368_Sensor_Operating_Mode(START_PRESSURE_MEASUREMENT);
            		wait_count = 0;
            	}
-           }
-           pressure = Get_DPS368_Pressure();
+        }
+
+        /* Once the status is ready, read the raw pressure and calculate the real pressure in Pa */
+        pressure = Get_DPS368_Pressure();
 
        	prs_flt = Calculate_Pressure(pressure);
 
-       	/* This is a delta pressure calc. Print  after 2nd pressure read */
+       	/* This is a delta pressure calc. Print after 2nd pressure read */
        	if (first_prs)
        	{
        		printf("Pressure %4.1f Pa \tDelta P %4.1f Pa \tTemp =  %4.1f F \r\n", prs_flt, prs_flt- last_prs_flt, ((temp_flt *9/5) +32));
@@ -361,25 +417,24 @@ void Read_Pressure( void * pvParameters )
        		/* If there is a change of more that +3 Pa, that indicates a fall event */
        		if (prs_flt- last_prs_flt > 3)
        		{
+       			/* Set Fall event flag and publish fall event flag, turn on LED and print message to debug port*/
        			fall_event = 1;
+       			publish_fall_event = 1;
        			publish_count = 0;
-       			cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_ON);
+       			cyhal_gpio_write( CYBSP_LED_RGB_GREEN, CYBSP_LED_STATE_ON);
        			printf("Fall Event \r\n");
        		}
-       		else
-       		{
-       			cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_OFF);
-       		}
-       		last_prs_flt = prs_flt;
+
+       		last_prs_flt = prs_flt;		/* this pressure reading becomes the last reading for testing on the next reading */
        	}
 
-       	/* This meams that this is the 1st pressure read, so set the flag */
+       	/* The 1st pressure read, so set the flag */
        	else
        	{
        		first_prs = 1;
        	}
 
-       	/* Publish the latest pressure read after 10 times through this task */
+       	/* Publish the latest pressure read after 10 times through this task or 5 seconds */
 
        	if (!publish_pressure)
        	{
@@ -388,11 +443,13 @@ void Read_Pressure( void * pvParameters )
        		{
        			publish_pressure = 1;
        			publish_count = 0;
-       			cyhal_gpio_toggle(CYBSP_LED_RGB_GREEN);
+       			cyhal_gpio_toggle(CYBSP_LED_RGB_RED);
        		}
        	}
-
+       	/* put the sensor in standby mode */
        	Set_DPS368_Sensor_Operating_Mode(STANDBY);
+
+       	/* release to scheduler for 500ms */
      	vTaskDelay(500);
     }
 }
@@ -402,9 +459,26 @@ void Read_Pressure( void * pvParameters )
  */
 int main( void )
 {
-    /* Perform any hardware initialization that does not require the RTOS to be
-     * running.  */
+    cy_rslt_t result;
+    /* Perform any hardware initialization that does not require the RTOS to be * running.  */
     prvMiscInitialization();
+
+    /* Initialize the user button */
+     result = cyhal_gpio_init(CYBSP_USER_BTN, CYHAL_GPIO_DIR_INPUT,
+                     CYHAL_GPIO_DRIVE_PULLUP, CYBSP_BTN_OFF);
+
+     /* if the result is an error, go to the error handler and stop */
+	 if (result != CY_RSLT_SUCCESS)
+	 {
+	     handle_error();
+	 }
+
+     /* Configure GPIO interrupt for the User Button*/
+     cyhal_gpio_register_callback(CYBSP_USER_BTN,
+                                  gpio_interrupt_handler, NULL);
+     cyhal_gpio_enable_event(CYBSP_USER_BTN, CYHAL_GPIO_IRQ_FALL,
+                                  GPIO_INTERRUPT_PRIORITY, true);
+
 
 #ifdef CY_TFM_PSA_SUPPORTED
     tfm_ns_multi_core_boot();
@@ -428,7 +502,6 @@ int main( void )
                      ucMACAddress );
 #endif /* CY_USE_FREERTOS_TCP */
 
-    /* Blinky Task */
 
  	/* Create the task, storing the handle. */
  	xTaskCreate(Read_Pressure,       /* Function that implements the task. */

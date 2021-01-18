@@ -28,10 +28,6 @@
  * @brief Demonstrates usage of the MQTT library.
  */
 
-extern float prs_flt;
-extern int	 publish_pressure;
-extern int	 fall_event;
-
 /* The config header is always included first. */
 #include "iot_config.h"
 
@@ -50,6 +46,12 @@ extern int	 fall_event;
 
 /* MQTT include. */
 #include "iot_mqtt.h"
+
+/* Giobal variabkes for publishing pressure data */
+extern float prs_flt;
+extern int	 fall_event;
+extern int	 publish_pressure;
+extern int	 publish_fall_event;
 
 /**
  * @cond DOXYGEN_IGNORE
@@ -638,9 +640,11 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
     /* Loop to PUBLISH all messages of this demo. */
     for(;;)
     {
-    	if(publish_pressure | fall_event)
+    	/* publish if either of the publish flags are set. Otherwise exit this function */
+    	if(publish_pressure | publish_fall_event)
     	{
-    		publish_pressure = 0;
+    		if (publish_pressure) publish_pressure = 0;
+    		if (publish_fall_event) publish_fall_event = 0;
 
     		/* Announce which burst of messages is being published. */
     		if( publishCount % IOT_DEMO_MQTT_PUBLISH_BURST_SIZE == 0 )
@@ -656,12 +660,11 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
     		/* Choose a topic name (round-robin through the array of topic names). */
     		publishInfo.pTopicName = pTopicNames[ publishCount % TOPIC_FILTER_COUNT ];
 
-			/* Generate the payload for the PUBLISH. */
+			/* Generate the payload for the PUBLISH. Includes the pressure value and fall event flag*/
 			status = snprintf( pPublishPayload,
 							   PUBLISH_PAYLOAD_BUFFER_LENGTH,
 							   PUBLISH_PAYLOAD_FORMAT,
-							   (int) prs_flt,
-								fall_event)  ;
+							   (int) prs_flt, fall_event)  ;
 
 		   	fall_event = 0;
         	/* Check for errors from snprintf. */
