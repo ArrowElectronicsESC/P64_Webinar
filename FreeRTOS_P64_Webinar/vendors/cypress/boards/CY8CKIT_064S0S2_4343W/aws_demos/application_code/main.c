@@ -286,8 +286,9 @@ void Read_Pressure( void * pvParameters )
 	    uint8_t	 wait_count;
 	    uint8_t	 first_prs;
 	    uint8_t	 publish_count;
-	    float temp_flt ;
-	 	float last_prs_flt;
+	    float 	 temp_flt ;
+	 	float 	 last_prs_flt;
+
 
 	    /* The parameter value is expected to be 1 as 1 is passed in the
 	    pvParameters value in the call to xTaskCreate() below. */
@@ -352,6 +353,7 @@ void Read_Pressure( void * pvParameters )
 
     for( ;; )
     {
+   		cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_OFF);
     	if(gpio_intr_flag)
     	{
     		gpio_intr_flag = 0;
@@ -443,7 +445,7 @@ void Read_Pressure( void * pvParameters )
        		{
        			publish_pressure = 1;
        			publish_count = 0;
-       			cyhal_gpio_toggle(CYBSP_LED_RGB_RED);
+       			cyhal_gpio_write( CYBSP_LED_RGB_RED, CYBSP_LED_STATE_ON);
        		}
        	}
        	/* put the sensor in standby mode */
