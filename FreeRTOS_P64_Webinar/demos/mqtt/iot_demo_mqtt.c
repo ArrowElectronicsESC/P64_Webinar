@@ -37,6 +37,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* Global Variables for publishing pressure sensor data */
+extern float prs_flt;
+extern int   fall_event;
+extern int   publish_pressure;
+extern int   publish_fall_event;
+
+
 /* Set up logging for this demo. */
 #include "iot_demo_logging.h"
 
@@ -46,12 +53,6 @@
 
 /* MQTT include. */
 #include "iot_mqtt.h"
-
-/* Giobal variabkes for publishing pressure data */
-extern float prs_flt;
-extern int	 fall_event;
-extern int	 publish_pressure;
-extern int	 publish_fall_event;
 
 /**
  * @cond DOXYGEN_IGNORE
@@ -144,7 +145,7 @@ extern int	 publish_fall_event;
 /**
  * @brief Format string of the PUBLISH messages in this demo.
  */
-#define PUBLISH_PAYLOAD_FORMAT                   "Pressure = %d Pa  Fall Event = %d"
+#define PUBLISH_PAYLOAD_FORMAT                   "{\"Pressure\": \"%d\", \"Fall\": \"%d\"}"
 
 /**
  * @brief Size of the buffer that holds the PUBLISH messages in this demo.
@@ -650,8 +651,8 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
     		if( publishCount % IOT_DEMO_MQTT_PUBLISH_BURST_SIZE == 0 )
     		{
     			IotLogInfo( "Publishing messages %d to %d.",
-    						publishCount,
-							publishCount + IOT_DEMO_MQTT_PUBLISH_BURST_SIZE - 1);
+    				     publishCount,
+				     publishCount + IOT_DEMO_MQTT_PUBLISH_BURST_SIZE - 1);
     		}
 
     		/* Pass the PUBLISH number to the operation complete callback. */
@@ -660,13 +661,14 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
     		/* Choose a topic name (round-robin through the array of topic names). */
     		publishInfo.pTopicName = pTopicNames[ publishCount % TOPIC_FILTER_COUNT ];
 
-			/* Generate the payload for the PUBLISH. Includes the pressure value and fall event flag*/
-			status = snprintf( pPublishPayload,
-							   PUBLISH_PAYLOAD_BUFFER_LENGTH,
-							   PUBLISH_PAYLOAD_FORMAT,
-							   (int) prs_flt, fall_event)  ;
+		/* Generate the payload for the PUBLISH. Includes the pressure value and fall event flag*/
+		status = snprintf( pPublishPayload,
+				  PUBLISH_PAYLOAD_BUFFER_LENGTH,
+				  PUBLISH_PAYLOAD_FORMAT,
+				 (int) prs_flt, fall_event)  ;
 
-		   	fall_event = 0;
+		fall_event = 0;
+
         	/* Check for errors from snprintf. */
         	if( status < 0 )
         	{
@@ -685,10 +687,10 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
         	/* PUBLISH a message. This is an asynchronous function that notifies of
         	 * completion through a callback. */
         	publishStatus = IotMqtt_Publish( mqttConnection,
-        									&publishInfo,
-											0,
-											&publishComplete,
-											NULL );
+        					&publishInfo,
+					0,
+					&publishComplete,
+					NULL );
 
         if( publishStatus != IOT_MQTT_STATUS_PENDING )
         {
@@ -718,9 +720,9 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
                     	status = EXIT_FAILURE;
                     	break;
                 	}
-            	}
+            }
 
-            	IotLogInfo( "%d publishes received.",
+            IotLogInfo( "%d publishes received.",
             				i );
         	}
 
@@ -730,12 +732,13 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
             	break;
         	}
 
-    	}
-
     }
+
+   }
 
     return status;
 }
+
 
 /*-----------------------------------------------------------*/
 
